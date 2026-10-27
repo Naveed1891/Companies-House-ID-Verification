@@ -76,9 +76,6 @@ function requireEnv(name: string): string {
 async function main() {
   const adminEmail = requireEnv("SEED_ADMIN_EMAIL").toLowerCase();
   const adminPassword = requireEnv("SEED_ADMIN_PASSWORD");
-  if (adminPassword.length < 12) {
-    throw new Error("SEED_ADMIN_PASSWORD must be at least 12 characters.");
-  }
 
   const service = await prisma.service.upsert({
     where: { slug: SERVICE_SLUG },
