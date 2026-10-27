@@ -25,6 +25,7 @@ export async function POST(request: Request) {
     );
   }
 
+  try {
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   const email = String(body?.email ?? "").trim().toLowerCase();
   if (!email) return NextResponse.json(GENERIC_OK);
@@ -91,4 +92,8 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json(GENERIC_OK);
+  } catch (err) {
+    console.error("[forgot-password] unhandled error:", err);
+    return NextResponse.json({ ok: false, error: "An unexpected error occurred." }, { status: 500 });
+  }
 }

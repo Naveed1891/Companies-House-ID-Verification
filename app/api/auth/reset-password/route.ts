@@ -16,6 +16,7 @@ export async function POST(request: Request) {
     );
   }
 
+  try {
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   const token = String(body?.token ?? "").trim();
   const password = String(body?.password ?? "");
@@ -63,4 +64,8 @@ export async function POST(request: Request) {
   ]);
 
   return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("[reset-password] unhandled error:", err);
+    return NextResponse.json({ ok: false, error: "An unexpected error occurred." }, { status: 500 });
+  }
 }
