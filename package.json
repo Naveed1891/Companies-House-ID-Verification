@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3004",
-    "build": "prisma generate && prisma migrate deploy && next build --webpack && node scripts/postbuild-standalone.mjs",
+    "build": "node scripts/build.js",
     "start": "node -r ./scripts/load-env.js .next/standalone/server.js",
     "lint": "eslint .",
     "prisma:generate": "prisma generate",
