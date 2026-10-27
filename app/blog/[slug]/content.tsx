@@ -5,7 +5,7 @@ function CtaBlock() {
   return (
     <aside className="my-10 bg-[#2e7d32] p-[clamp(26px,4vw,36px)] text-white">
       <h2 className="mt-0 text-white">Complete your verification with confidence</h2>
-      <p className="mb-5 text-white/90">Guided support for UK and international applicants — fixed £19 fee, ACSP approved.</p>
+      <p className="mb-5 text-white/90">Guided support for UK and international applicants - fixed £19 fee, ACSP approved.</p>
       <Link href="/checkout" className="inline-flex items-center bg-white px-6 py-3 text-[15px] font-bold text-[#2e7d32] no-underline hover:bg-[#f1f8f1]">Start Verification →</Link>
     </aside>
   );
@@ -15,7 +15,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "what-is-companies-house-identity-verification": (
     <>
       <p>
-        <strong>Companies House identity verification</strong> is a legal requirement introduced by the Economic Crime and Corporate Transparency Act (ECCTA). It requires individuals connected to UK companies — including directors, persons with significant control (PSCs), LLP members and authorised filers — to prove their identity to Companies House. Once verified, each person receives a unique 11-character <strong>Companies House personal code</strong> that links them to every role they hold.
+        <strong>Companies House identity verification</strong> is a legal requirement introduced by the Economic Crime and Corporate Transparency Act (ECCTA). It requires individuals connected to UK companies - including directors, persons with significant control (PSCs), LLP members and authorised filers - to prove their identity to Companies House. Once verified, each person receives a unique 11-character <strong>Companies House personal code</strong> that links them to every role they hold.
       </p>
 
       <h2>Why was Companies House identity verification introduced?</h2>
@@ -32,10 +32,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         The requirement applies to four groups of people:
       </p>
       <ul>
-        <li><strong>Company directors</strong> — all directors of UK limited companies, whether newly appointed or already serving</li>
-        <li><strong>Persons with significant control (PSCs)</strong> — individuals who own or control more than 25% of a company</li>
-        <li><strong>LLP members</strong> — members of limited liability partnerships</li>
-        <li><strong>Authorised filers</strong> — people who file documents with Companies House on behalf of a company</li>
+        <li><strong>Company directors</strong> - all directors of UK limited companies, whether newly appointed or already serving</li>
+        <li><strong>Persons with significant control (PSCs)</strong> - individuals who own or control more than 25% of a company</li>
+        <li><strong>LLP members</strong> - members of limited liability partnerships</li>
+        <li><strong>Authorised filers</strong> - people who file documents with Companies House on behalf of a company</li>
       </ul>
       <p>
         This applies regardless of where you live. International directors and PSCs have the same obligations as those based in the UK. Visit our <Link href="/who-needs-to-verify">who needs to verify</Link> page for a detailed breakdown.
@@ -46,8 +46,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         There are two ways to verify your identity with Companies House:
       </p>
       <ol>
-        <li><strong>GOV.UK One Login</strong> — the free, self-service route where you verify yourself using a UK passport or UK driving licence through the Government&rsquo;s online identity service</li>
-        <li><strong>An Authorised Corporate Service Provider (ACSP)</strong> — a verified third-party agent who can carry out the identity checks on your behalf, often accepting a wider range of documents and supporting international applicants</li>
+        <li><strong>GOV.UK One Login</strong> - the free, self-service route where you verify yourself using a UK passport or UK driving licence through the Government&rsquo;s online identity service</li>
+        <li><strong>An Authorised Corporate Service Provider (ACSP)</strong> - a verified third-party agent who can carry out the identity checks on your behalf, often accepting a wider range of documents and supporting international applicants</li>
       </ol>
       <p>
         Both routes produce the same result: an 11-character personal code issued to you by Companies House. The code belongs to you as an individual, not to any specific company.
@@ -55,7 +55,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What is a Companies House personal code?</h2>
       <p>
-        Your personal code is an 11-character alphanumeric code in the format XXXX-XXXX-XXXX. After receiving it, you must provide it for each role you hold — for example, once for each directorship and once for each PSC position. The code is permanent and does not expire, though you must keep it secure.
+        Your personal code is an 11-character alphanumeric code in the format XXXX-XXXX-XXXX. After receiving it, you must provide it for each role you hold - for example, once for each directorship and once for each PSC position. The code is permanent and does not expire, though you must keep it secure.
       </p>
       <p>
         Learn more about <Link href="/how-it-works">how the verification process works</Link> step by step.
@@ -117,8 +117,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Companies House offers two ways to verify your identity:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — a free, self-service option. You create or sign in to a GOV.UK One Login account and verify your identity using a UK passport or UK driving licence. This route is limited to UK-issued documents and requires a smartphone for the identity check.</li>
-        <li><strong>Authorised Corporate Service Provider (ACSP)</strong> — an approved agent who performs the identity checks on your behalf. ACSPs typically accept a broader range of documents, including international passports, and can support applicants who cannot use GOV.UK One Login.</li>
+        <li><strong>GOV.UK One Login</strong> - a free, self-service option. You create or sign in to a GOV.UK One Login account and verify your identity using a UK passport or UK driving licence. This route is limited to UK-issued documents and requires a smartphone for the identity check.</li>
+        <li><strong>Authorised Corporate Service Provider (ACSP)</strong> - an approved agent who performs the identity checks on your behalf. ACSPs typically accept a broader range of documents, including international passports, and can support applicants who cannot use GOV.UK One Login.</li>
       </ul>
       <p>
         Companies House ID Verification offers a guided ACSP verification route at a fixed <strong>£19 per person</strong>. See our <Link href="/pricing">pricing page</Link> for full details.
@@ -136,7 +136,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         <li>The company number for each company where you hold a role</li>
       </ul>
       <p>
-        Your identity document name must match the name recorded at Companies House. Any discrepancy — middle names, spelling differences or name changes — can cause problems when linking your personal code to your role. Check the <Link href="/requirements">document requirements</Link> before you begin.
+        Your identity document name must match the name recorded at Companies House. Any discrepancy - middle names, spelling differences or name changes - can cause problems when linking your personal code to your role. Check the <Link href="/requirements">document requirements</Link> before you begin.
       </p>
 
       <h2>Step 4: Complete the identity check</h2>
@@ -149,7 +149,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 5: Receive your personal code</h2>
       <p>
-        Once your identity is verified, Companies House issues your 11-character personal code. You will receive this through the service you used — either via your GOV.UK One Login account or from your ACSP provider.
+        Once your identity is verified, Companies House issues your 11-character personal code. You will receive this through the service you used - either via your GOV.UK One Login account or from your ACSP provider.
       </p>
       <p>
         Store your personal code securely. You will need it to complete the final step.
@@ -188,7 +188,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Gather the following before beginning your Companies House ID verification:
       </p>
       <ul>
-        <li>A valid photo identity document — passport, national ID card or driving licence</li>
+        <li>A valid photo identity document - passport, national ID card or driving licence</li>
         <li>Your full name as it appears on both your ID and the Companies House register</li>
         <li>Your date of birth and current residential address</li>
         <li>The company number for each company where you hold a role</li>
@@ -200,8 +200,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         You have two options:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — free, self-service, limited to UK passport or UK driving licence</li>
-        <li><strong>An ACSP</strong> — a verified agent who accepts a wider range of documents, including international passports</li>
+        <li><strong>GOV.UK One Login</strong> - free, self-service, limited to UK passport or UK driving licence</li>
+        <li><strong>An ACSP</strong> - a verified agent who accepts a wider range of documents, including international passports</li>
       </ul>
       <p>
         Companies House ID Verification offers an ACSP-supported route for a fixed <strong>£19 per person</strong>. It is particularly useful for overseas applicants or anyone without a UK passport or driving licence.
@@ -214,7 +214,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 3: Enter your personal details</h2>
       <p>
-        Provide your full legal name, date of birth, nationality, residential address and the details of the company role you need to verify. Double-check that your name matches the Companies House register exactly — differences in spelling, middle names or titles can cause problems later.
+        Provide your full legal name, date of birth, nationality, residential address and the details of the company role you need to verify. Double-check that your name matches the Companies House register exactly - differences in spelling, middle names or titles can cause problems later.
       </p>
 
       <h2>Step 4: Upload your identity document</h2>
@@ -234,7 +234,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 7: Receive your personal code</h2>
       <p>
-        When verification is complete, you receive your 11-character <strong>Companies House personal code</strong>. Store it securely — you will need it for the next step and for future company filings.
+        When verification is complete, you receive your 11-character <strong>Companies House personal code</strong>. Store it securely - you will need it for the next step and for future company filings.
       </p>
 
       <h2>Step 8: Link your code to your company roles</h2>
@@ -248,10 +248,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Common issues to watch for</h2>
       <ul>
-        <li><strong>Name mismatches</strong> — your ID name must match the Companies House register. Update the register first if there is a discrepancy.</li>
-        <li><strong>Expired documents</strong> — only current, valid documents are accepted.</li>
-        <li><strong>Poor image quality</strong> — make sure your document photo is clear and well-lit.</li>
-        <li><strong>Multiple roles</strong> — verify once, but link your code to each role individually.</li>
+        <li><strong>Name mismatches</strong> - your ID name must match the Companies House register. Update the register first if there is a discrepancy.</li>
+        <li><strong>Expired documents</strong> - only current, valid documents are accepted.</li>
+        <li><strong>Poor image quality</strong> - make sure your document photo is clear and well-lit.</li>
+        <li><strong>Multiple roles</strong> - verify once, but link your code to each role individually.</li>
       </ul>
 
       <h2>Ready to begin?</h2>
@@ -290,7 +290,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>2. Persons with significant control (PSCs)</h2>
       <p>
-        A PSC is an individual who owns or controls a company — typically anyone holding more than 25% of shares or voting rights, or who can appoint or remove a majority of directors. PSCs must verify their identity and provide their personal code separately from any director verification.
+        A PSC is an individual who owns or controls a company - typically anyone holding more than 25% of shares or voting rights, or who can appoint or remove a majority of directors. PSCs must verify their identity and provide their personal code separately from any director verification.
       </p>
 
       <h2>3. LLP members</h2>
@@ -320,7 +320,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Check whether you need to verify</h2>
       <p>
-        If you hold any role at a UK company — director, PSC, LLP member or authorised filer — you almost certainly need to verify. Visit our <Link href="/who-needs-to-verify">detailed eligibility guide</Link> or check the official{" "}
+        If you hold any role at a UK company - director, PSC, LLP member or authorised filer - you almost certainly need to verify. Visit our <Link href="/who-needs-to-verify">detailed eligibility guide</Link> or check the official{" "}
         <a href="https://www.gov.uk/guidance/companies-house-identity-verification" target="_blank" rel="noopener noreferrer">Companies House guidance</a>.
       </p>
       <p>
@@ -338,8 +338,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>The key dates</h2>
       <ul>
-        <li><strong>18 November 2025</strong> — identity verification became a legal requirement. From this date, new directors must verify before their appointment can be registered.</li>
-        <li><strong>November 2026</strong> — the deadline for existing directors and PSCs to complete verification and provide their personal code. The exact date within November depends on your individual circumstances.</li>
+        <li><strong>18 November 2025</strong> - identity verification became a legal requirement. From this date, new directors must verify before their appointment can be registered.</li>
+        <li><strong>November 2026</strong> - the deadline for existing directors and PSCs to complete verification and provide their personal code. The exact date within November depends on your individual circumstances.</li>
       </ul>
 
       <h2>Deadlines for existing directors</h2>
@@ -350,7 +350,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Deadlines for new directors</h2>
       <p>
-        Directors appointed on or after 18 November 2025 must verify their identity before Companies House will register the appointment. There is no transition period — verification is a prerequisite to becoming a registered director.
+        Directors appointed on or after 18 November 2025 must verify their identity before Companies House will register the appointment. There is no transition period - verification is a prerequisite to becoming a registered director.
       </p>
 
       <h2>Deadlines for PSCs</h2>
@@ -376,7 +376,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
       <ul>
         <li>Name mismatches between your ID and the Companies House register take time to resolve</li>
         <li>If your document check requires additional review, it could take longer than expected</li>
-        <li>Millions of people will be trying to verify around the same time — services and support may be busier</li>
+        <li>Millions of people will be trying to verify around the same time - services and support may be busier</li>
         <li>You need time after receiving your code to link it to each role you hold</li>
       </ul>
 
@@ -405,8 +405,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Companies House does not carry out identity checks itself. Instead, verification is handled through one of two approved routes:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — the direct, government-operated identity service. You verify yourself online using a UK passport or UK driving licence. It is free to use but limited to these two document types.</li>
-        <li><strong>Authorised Corporate Service Providers (ACSPs)</strong> — approved agents who perform identity checks under Companies House supervision. ACSPs accept a broader range of documents, support international applicants, and provide assisted verification.</li>
+        <li><strong>GOV.UK One Login</strong> - the direct, government-operated identity service. You verify yourself online using a UK passport or UK driving licence. It is free to use but limited to these two document types.</li>
+        <li><strong>Authorised Corporate Service Providers (ACSPs)</strong> - approved agents who perform identity checks under Companies House supervision. ACSPs accept a broader range of documents, support international applicants, and provide assisted verification.</li>
       </ul>
 
       <h2>What the identity check involves</h2>
@@ -414,15 +414,15 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Whichever route you take, the identity check follows a similar pattern:
       </p>
       <ol>
-        <li><strong>Document submission</strong> — you provide a valid, current photo identity document. The document is checked for authenticity and for whether it matches the details you have given.</li>
-        <li><strong>Data matching</strong> — your name, date of birth and other details are compared against the information held at Companies House and, where applicable, against external databases.</li>
-        <li><strong>Liveness check</strong> — you take a real-time photo or video to confirm that you are the person on the identity document. This prevents impersonation.</li>
-        <li><strong>Decision</strong> — your verification is either confirmed or referred for additional checks. Most straightforward verifications are completed quickly.</li>
+        <li><strong>Document submission</strong> - you provide a valid, current photo identity document. The document is checked for authenticity and for whether it matches the details you have given.</li>
+        <li><strong>Data matching</strong> - your name, date of birth and other details are compared against the information held at Companies House and, where applicable, against external databases.</li>
+        <li><strong>Liveness check</strong> - you take a real-time photo or video to confirm that you are the person on the identity document. This prevents impersonation.</li>
+        <li><strong>Decision</strong> - your verification is either confirmed or referred for additional checks. Most straightforward verifications are completed quickly.</li>
       </ol>
 
       <h2>What happens after verification</h2>
       <p>
-        Once your identity is verified, Companies House issues your <strong>11-character personal code</strong>. The code belongs to you personally and does not expire. You must then provide it for each company role you hold — once per directorship, once per PSC position, and so on.
+        Once your identity is verified, Companies House issues your <strong>11-character personal code</strong>. The code belongs to you personally and does not expire. You must then provide it for each company role you hold - once per directorship, once per PSC position, and so on.
       </p>
       <p>
         The code is provided through the Companies House online service, usually as part of a confirmation statement or through the dedicated code-linking service for PSCs.
@@ -438,10 +438,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         The most common issues that delay or block verification are:
       </p>
       <ul>
-        <li><strong>Name mismatches</strong> — your ID name does not match the name on the Companies House register</li>
-        <li><strong>Expired documents</strong> — only current, valid documents are accepted</li>
-        <li><strong>Poor image quality</strong> — blurry or low-resolution document photos may be rejected</li>
-        <li><strong>Liveness check failure</strong> — poor lighting, glasses or camera issues can affect the check</li>
+        <li><strong>Name mismatches</strong> - your ID name does not match the name on the Companies House register</li>
+        <li><strong>Expired documents</strong> - only current, valid documents are accepted</li>
+        <li><strong>Poor image quality</strong> - blurry or low-resolution document photos may be rejected</li>
+        <li><strong>Liveness check failure</strong> - poor lighting, glasses or camera issues can affect the check</li>
       </ul>
       <p>
         Review the <Link href="/requirements">requirements page</Link> to prepare properly before starting.
@@ -458,7 +458,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "is-companies-house-id-verification-mandatory": (
     <>
       <p>
-        Yes, <strong>Companies House ID verification is mandatory</strong>. It is a legal requirement under the Economic Crime and Corporate Transparency Act (ECCTA) for all individuals connected to UK companies in qualifying roles. This is not optional or advisory — it is the law.
+        Yes, <strong>Companies House ID verification is mandatory</strong>. It is a legal requirement under the Economic Crime and Corporate Transparency Act (ECCTA) for all individuals connected to UK companies in qualifying roles. This is not optional or advisory - it is the law.
       </p>
 
       <h2>Who is it mandatory for?</h2>
@@ -467,9 +467,9 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
       </p>
       <ul>
         <li><strong>All directors</strong> of UK limited companies, including those based overseas</li>
-        <li><strong>All PSCs</strong> — persons with significant control over a UK company</li>
-        <li><strong>All LLP members</strong> — members of limited liability partnerships</li>
-        <li><strong>All authorised filers</strong> — anyone who files documents at Companies House on behalf of a company</li>
+        <li><strong>All PSCs</strong> - persons with significant control over a UK company</li>
+        <li><strong>All LLP members</strong> - members of limited liability partnerships</li>
+        <li><strong>All authorised filers</strong> - anyone who files documents at Companies House on behalf of a company</li>
       </ul>
       <p>
         There are no exemptions based on company size, turnover, activity or the individual&rsquo;s country of residence.
@@ -488,7 +488,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What are the consequences of not complying?</h2>
       <p>
-        Failing to verify your identity is not just an administrative issue — it has legal consequences:
+        Failing to verify your identity is not just an administrative issue - it has legal consequences:
       </p>
       <ul>
         <li>A public notation will be added to the Companies House register against your name</li>
@@ -499,7 +499,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Can you opt out?</h2>
       <p>
-        No. There is no opt-out mechanism. If you hold a qualifying role at a UK company, you must verify. The only way to avoid the requirement is to resign from all qualifying roles — but that obviously has its own consequences.
+        No. There is no opt-out mechanism. If you hold a qualifying role at a UK company, you must verify. The only way to avoid the requirement is to resign from all qualifying roles - but that obviously has its own consequences.
       </p>
 
       <h2>How to comply</h2>
@@ -529,7 +529,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Authorised Corporate Service Provider (ACSP): varies</h2>
       <p>
-        ACSPs are approved agents who carry out identity checks on behalf of Companies House. Each ACSP sets its own fee. Costs vary widely — from under £20 to several hundred pounds, depending on the provider and the level of service.
+        ACSPs are approved agents who carry out identity checks on behalf of Companies House. Each ACSP sets its own fee. Costs vary widely - from under £20 to several hundred pounds, depending on the provider and the level of service.
       </p>
       <p>
         Some ACSPs bundle identity verification with other company services such as formations or annual compliance. Others offer standalone verification at a fixed price.
@@ -552,12 +552,12 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Do you need to pay for each company?</h2>
       <p>
-        No. Verification is per person, not per company. You verify your identity once, receive one personal code, and then link that code to every role you hold. If you are a director of three companies, you pay for one verification — but you must provide your code separately for each directorship.
+        No. Verification is per person, not per company. You verify your identity once, receive one personal code, and then link that code to every role you hold. If you are a director of three companies, you pay for one verification - but you must provide your code separately for each directorship.
       </p>
 
       <h2>Are there additional government fees?</h2>
       <p>
-        Companies House does not charge a fee for issuing your personal code. The only cost is the verification itself — either free through GOV.UK One Login or through the ACSP fee if you use a service provider.
+        Companies House does not charge a fee for issuing your personal code. The only cost is the verification itself - either free through GOV.UK One Login or through the ACSP fee if you use a service provider.
       </p>
 
       <h2>Which option is right for you?</h2>
@@ -582,7 +582,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>The free route: GOV.UK One Login</h2>
       <p>
-        Companies House allows you to verify your identity for free through GOV.UK One Login, the government&rsquo;s digital identity service. You create an account, verify using a UK passport or UK driving licence, and receive your personal code — all at no charge.
+        Companies House allows you to verify your identity for free through GOV.UK One Login, the government&rsquo;s digital identity service. You create an account, verify using a UK passport or UK driving licence, and receive your personal code - all at no charge.
       </p>
 
       <h2>Limitations of the free route</h2>
@@ -590,10 +590,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         GOV.UK One Login currently has several restrictions:
       </p>
       <ul>
-        <li><strong>Document types</strong> — only UK passports and UK driving licences are accepted. No international passports, no national ID cards, no other documents.</li>
-        <li><strong>Self-service only</strong> — there is no guided assistance. You must navigate the process yourself.</li>
-        <li><strong>Technology requirements</strong> — you need a smartphone with a working camera for the identity check. Desktop-only users may face difficulties.</li>
-        <li><strong>No support for name discrepancies</strong> — if your name on your ID does not match the Companies House register, the free route will not help you resolve it.</li>
+        <li><strong>Document types</strong> - only UK passports and UK driving licences are accepted. No international passports, no national ID cards, no other documents.</li>
+        <li><strong>Self-service only</strong> - there is no guided assistance. You must navigate the process yourself.</li>
+        <li><strong>Technology requirements</strong> - you need a smartphone with a working camera for the identity check. Desktop-only users may face difficulties.</li>
+        <li><strong>No support for name discrepancies</strong> - if your name on your ID does not match the Companies House register, the free route will not help you resolve it.</li>
       </ul>
 
       <h2>When a paid service is the better option</h2>
@@ -611,7 +611,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>How much does a paid service cost?</h2>
       <p>
-        Companies House ID Verification charges a fixed <strong>£19 per person</strong> — no hidden fees, no tiers. This covers the complete guided process including identity checks, document verification and personal code guidance. Visit our <Link href="/pricing">pricing page</Link> for full details.
+        Companies House ID Verification charges a fixed <strong>£19 per person</strong> - no hidden fees, no tiers. This covers the complete guided process including identity checks, document verification and personal code guidance. Visit our <Link href="/pricing">pricing page</Link> for full details.
       </p>
 
       <h2>Is the result the same?</h2>
@@ -638,7 +638,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What you need to verify online</h2>
       <ul>
-        <li>A device with internet access — computer, laptop, tablet or smartphone</li>
+        <li>A device with internet access - computer, laptop, tablet or smartphone</li>
         <li>A camera on your device for the liveness check</li>
         <li>A valid photo identity document (passport, national ID card or driving licence)</li>
         <li>Your personal details: full name, date of birth, residential address</li>
@@ -647,12 +647,12 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>The online process through Companies House ID Verification</h2>
       <ol>
-        <li><strong>Create an account</strong> — <Link href="/start">sign up</Link> on our website with your email address</li>
-        <li><strong>Select your verification type</strong> — choose whether you are verifying as a director, PSC, LLP member or authorised filer</li>
-        <li><strong>Enter your details</strong> — provide your personal information and company connections</li>
-        <li><strong>Upload your identity document</strong> — take a clear photo or upload a scan</li>
-        <li><strong>Complete the liveness check</strong> — a quick real-time photo to confirm you are the person on the document</li>
-        <li><strong>Receive your personal code</strong> — once verified, your 11-character code is issued</li>
+        <li><strong>Create an account</strong> - <Link href="/start">sign up</Link> on our website with your email address</li>
+        <li><strong>Select your verification type</strong> - choose whether you are verifying as a director, PSC, LLP member or authorised filer</li>
+        <li><strong>Enter your details</strong> - provide your personal information and company connections</li>
+        <li><strong>Upload your identity document</strong> - take a clear photo or upload a scan</li>
+        <li><strong>Complete the liveness check</strong> - a quick real-time photo to confirm you are the person on the document</li>
+        <li><strong>Receive your personal code</strong> - once verified, your 11-character code is issued</li>
       </ol>
 
       <h2>How long does online verification take?</h2>
@@ -681,12 +681,12 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "what-happens-if-you-dont-complete-companies-house-verification": (
     <>
       <p>
-        Failing to complete <strong>Companies House verification</strong> before the deadline has serious legal and practical consequences. This is not a soft requirement — ECCTA gives Companies House enforcement powers and creates criminal offences for non-compliance.
+        Failing to complete <strong>Companies House verification</strong> before the deadline has serious legal and practical consequences. This is not a soft requirement - ECCTA gives Companies House enforcement powers and creates criminal offences for non-compliance.
       </p>
 
       <h2>Public register notation</h2>
       <p>
-        After the deadline, Companies House will add a public annotation to the register against anyone who has not been verified. This is visible to anyone searching the company — banks, lenders, investors, customers, partners and competitors can all see it.
+        After the deadline, Companies House will add a public annotation to the register against anyone who has not been verified. This is visible to anyone searching the company - banks, lenders, investors, customers, partners and competitors can all see it.
       </p>
       <p>
         A notation against your name signals non-compliance and can raise due diligence concerns for anyone dealing with the company.
@@ -703,7 +703,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         <li>Your company may be unable to complete routine compliance filings</li>
       </ul>
       <p>
-        These restrictions do not just affect you personally — they can paralyse the company&rsquo;s operations.
+        These restrictions do not just affect you personally - they can paralyse the company&rsquo;s operations.
       </p>
 
       <h2>Criminal liability for directors</h2>
@@ -711,7 +711,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         The most severe consequence is criminal liability. Under ECCTA, continuing to act as a company director after the verification deadline without having been verified is a <strong>criminal offence</strong>. This could result in a fine or, in serious cases, other penalties.
       </p>
       <p>
-        This applies to active participation in the company&rsquo;s affairs — signing documents, making decisions, representing the company — not merely remaining on the register.
+        This applies to active participation in the company&rsquo;s affairs - signing documents, making decisions, representing the company - not merely remaining on the register.
       </p>
 
       <h2>Consequences for PSCs</h2>
@@ -757,9 +757,9 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         You must provide a valid, current photo identity document. Through GOV.UK One Login, only a UK passport or UK driving licence is accepted. Through an ACSP such as Companies House ID Verification, the following documents are typically accepted:
       </p>
       <ul>
-        <li><strong>Passports</strong> — UK or international, must be current and not expired</li>
-        <li><strong>National identity cards</strong> — issued by EEA or other countries with machine-readable features</li>
-        <li><strong>UK driving licences</strong> — photocard style, current and not expired</li>
+        <li><strong>Passports</strong> - UK or international, must be current and not expired</li>
+        <li><strong>National identity cards</strong> - issued by EEA or other countries with machine-readable features</li>
+        <li><strong>UK driving licences</strong> - photocard style, current and not expired</li>
       </ul>
       <p>
         The document must contain a clear photograph, your full legal name, your date of birth and a machine-readable zone where applicable. Check our <Link href="/requirements">requirements page</Link> for the detailed list.
@@ -770,7 +770,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         You will need to provide:
       </p>
       <ul>
-        <li>Your full legal name — as it appears on your identity document</li>
+        <li>Your full legal name - as it appears on your identity document</li>
         <li>Your date of birth</li>
         <li>Your current residential address</li>
         <li>Your nationality</li>
@@ -790,10 +790,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         The liveness check requires you to use a device with a working camera. You will take a real-time photo or short video that is compared to the photograph on your identity document. Requirements for the check:
       </p>
       <ul>
-        <li>Good lighting — avoid backlighting or harsh shadows</li>
-        <li>Face fully visible — remove hats, sunglasses or face coverings</li>
-        <li>Stable camera — hold the device steady or place it on a surface</li>
-        <li>Clean lens — ensure the camera is not obscured</li>
+        <li>Good lighting - avoid backlighting or harsh shadows</li>
+        <li>Face fully visible - remove hats, sunglasses or face coverings</li>
+        <li>Stable camera - hold the device steady or place it on a surface</li>
+        <li>Clean lens - ensure the camera is not obscured</li>
       </ul>
 
       <h2>Technical requirements</h2>
@@ -818,12 +818,12 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "what-is-a-companies-house-personal-code": (
     <>
       <p>
-        A <strong>Companies House personal code</strong> is an 11-character alphanumeric code issued to you after you have verified your identity with Companies House. It is your personal identifier — it belongs to you as an individual and links you to every company role you hold.
+        A <strong>Companies House personal code</strong> is an 11-character alphanumeric code issued to you after you have verified your identity with Companies House. It is your personal identifier - it belongs to you as an individual and links you to every company role you hold.
       </p>
 
       <h2>What does a personal code look like?</h2>
       <p>
-        The code follows a format like <strong>XXXX-XXXX-XXXX</strong> — 11 characters made up of letters and numbers, grouped into three blocks separated by hyphens. Each personal code is unique and is issued only once per person.
+        The code follows a format like <strong>XXXX-XXXX-XXXX</strong> - 11 characters made up of letters and numbers, grouped into three blocks separated by hyphens. Each personal code is unique and is issued only once per person.
       </p>
 
       <h2>How do you get a personal code?</h2>
@@ -831,8 +831,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         You receive your personal code after completing identity verification through one of two routes:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — verify for free using a UK passport or driving licence</li>
-        <li><strong>An Authorised Corporate Service Provider (ACSP)</strong> — a verified agent who performs the identity checks, such as Companies House ID Verification (fixed <strong>£19</strong> per person)</li>
+        <li><strong>GOV.UK One Login</strong> - verify for free using a UK passport or driving licence</li>
+        <li><strong>An Authorised Corporate Service Provider (ACSP)</strong> - a verified agent who performs the identity checks, such as Companies House ID Verification (fixed <strong>£19</strong> per person)</li>
       </ul>
       <p>
         Once verification is complete, your code is issued by Companies House and provided through the service you used. Learn more about <Link href="/how-it-works">how the process works</Link>.
@@ -843,10 +843,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Your personal code is used to:
       </p>
       <ul>
-        <li><strong>Link your verified identity to your company roles</strong> — you must provide it for each directorship, PSC position and LLP membership</li>
-        <li><strong>File confirmation statements</strong> — your code is required as part of the annual confirmation statement</li>
-        <li><strong>Register new appointments</strong> — new directors and PSCs must supply a personal code as part of the appointment process</li>
-        <li><strong>Submit certain filings</strong> — some Companies House filings now require a personal code</li>
+        <li><strong>Link your verified identity to your company roles</strong> - you must provide it for each directorship, PSC position and LLP membership</li>
+        <li><strong>File confirmation statements</strong> - your code is required as part of the annual confirmation statement</li>
+        <li><strong>Register new appointments</strong> - new directors and PSCs must supply a personal code as part of the appointment process</li>
+        <li><strong>Submit certain filings</strong> - some Companies House filings now require a personal code</li>
       </ul>
 
       <h2>One code for all your roles</h2>
@@ -859,9 +859,9 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         No. Companies House issues several types of codes, and they serve different purposes:
       </p>
       <ul>
-        <li><strong>Personal code</strong> — identifies you as a verified individual (11 characters, issued after identity verification)</li>
-        <li><strong>Authentication code</strong> — a 6-character code that allows you to file documents for a specific company (issued to the company, not the individual)</li>
-        <li><strong>Company number</strong> — the unique identifier for the company itself</li>
+        <li><strong>Personal code</strong> - identifies you as a verified individual (11 characters, issued after identity verification)</li>
+        <li><strong>Authentication code</strong> - a 6-character code that allows you to file documents for a specific company (issued to the company, not the individual)</li>
+        <li><strong>Company number</strong> - the unique identifier for the company itself</li>
       </ul>
       <p>
         Do not confuse these codes. Your personal code is personal to you; the authentication code belongs to the company.
@@ -869,7 +869,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>How to keep your personal code safe</h2>
       <ul>
-        <li>Store it in a secure location — a password manager or a locked document</li>
+        <li>Store it in a secure location - a password manager or a locked document</li>
         <li>Do not share it publicly or post it online</li>
         <li>If you share it with an accountant or filing agent, do so securely</li>
         <li>If you believe your code has been compromised, contact Companies House</li>
@@ -894,8 +894,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Your personal code was delivered through the service you used to verify:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — your code should be visible in your GOV.UK One Login account after verification</li>
-        <li><strong>An ACSP</strong> — your code was sent via the ACSP&rsquo;s service, typically by email or through their account portal</li>
+        <li><strong>GOV.UK One Login</strong> - your code should be visible in your GOV.UK One Login account after verification</li>
+        <li><strong>An ACSP</strong> - your code was sent via the ACSP&rsquo;s service, typically by email or through their account portal</li>
       </ul>
 
       <h2>Check your email</h2>
@@ -923,9 +923,9 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         If you have exhausted all the above options:
       </p>
       <ul>
-        <li><strong>Contact your ACSP</strong> — if you verified through an ACSP, they should be able to help you retrieve or confirm your code</li>
-        <li><strong>Contact Companies House</strong> — Companies House may be able to reissue or help you recover your personal code</li>
-        <li><strong>Do not re-verify unnecessarily</strong> — check all options before starting a new verification, as you should already have a code on record</li>
+        <li><strong>Contact your ACSP</strong> - if you verified through an ACSP, they should be able to help you retrieve or confirm your code</li>
+        <li><strong>Contact Companies House</strong> - Companies House may be able to reissue or help you recover your personal code</li>
+        <li><strong>Do not re-verify unnecessarily</strong> - check all options before starting a new verification, as you should already have a code on record</li>
       </ul>
 
       <h2>Prevent losing it again</h2>
@@ -952,7 +952,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>If you verified through an ACSP</h2>
       <p>
-        Your ACSP — the Authorised Corporate Service Provider who carried out your verification — will have sent your personal code to you. Check:
+        Your ACSP - the Authorised Corporate Service Provider who carried out your verification - will have sent your personal code to you. Check:
       </p>
       <ul>
         <li>Emails from the ACSP or their verification platform</li>
@@ -962,7 +962,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Check your email inbox</h2>
       <p>
-        Search for emails containing &ldquo;personal code&rdquo; or &ldquo;verification complete&rdquo;. Also search for the name of the verification service you used. Check spam and junk folders — automated emails sometimes end up there.
+        Search for emails containing &ldquo;personal code&rdquo; or &ldquo;verification complete&rdquo;. Also search for the name of the verification service you used. Check spam and junk folders - automated emails sometimes end up there.
       </p>
 
       <h2>Check saved documents</h2>
@@ -1016,11 +1016,11 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What to do</h2>
       <ol>
-        <li><strong>Check your verification status</strong> — log in to the service you used and check whether verification is marked as complete</li>
-        <li><strong>Check all email folders</strong> — inbox, spam, junk, promotions</li>
-        <li><strong>Confirm your email address</strong> — make sure the address on your account is correct</li>
-        <li><strong>Contact the verification service</strong> — if you used an ACSP, contact them for an update</li>
-        <li><strong>Contact Companies House</strong> — if you verified through GOV.UK One Login and cannot find your code</li>
+        <li><strong>Check your verification status</strong> - log in to the service you used and check whether verification is marked as complete</li>
+        <li><strong>Check all email folders</strong> - inbox, spam, junk, promotions</li>
+        <li><strong>Confirm your email address</strong> - make sure the address on your account is correct</li>
+        <li><strong>Contact the verification service</strong> - if you used an ACSP, contact them for an update</li>
+        <li><strong>Contact Companies House</strong> - if you verified through GOV.UK One Login and cannot find your code</li>
       </ol>
 
       <h2>How long should it take?</h2>
@@ -1065,9 +1065,9 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Which code do you need?</h2>
       <ul>
-        <li><strong>Asked to verify your identity?</strong> — you need a personal code (from identity verification)</li>
-        <li><strong>Asked to file a confirmation statement?</strong> — you need both your personal code and the company&rsquo;s authentication code</li>
-        <li><strong>Asked for a company authentication code?</strong> — this is a company-level code, available through the Companies House WebFiling service</li>
+        <li><strong>Asked to verify your identity?</strong> - you need a personal code (from identity verification)</li>
+        <li><strong>Asked to file a confirmation statement?</strong> - you need both your personal code and the company&rsquo;s authentication code</li>
+        <li><strong>Asked for a company authentication code?</strong> - this is a company-level code, available through the Companies House WebFiling service</li>
       </ul>
 
       <h2>How to get your personal code</h2>
@@ -1112,12 +1112,12 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Sharing your code with an accountant or agent</h2>
       <p>
-        If your accountant or company secretary files on your behalf, they will need your personal code to complete the filing. Share it securely — not by plain-text email. Use encrypted messaging, a secure portal or a phone call.
+        If your accountant or company secretary files on your behalf, they will need your personal code to complete the filing. Share it securely - not by plain-text email. Use encrypted messaging, a secure portal or a phone call.
       </p>
 
       <h2>Can you use the code immediately?</h2>
       <p>
-        Yes. Once issued, your personal code can be used straight away. There is no waiting period. However, you can only provide it during the correct filing window — for existing directors, this is at the next confirmation statement; for PSCs, during their 14-day window.
+        Yes. Once issued, your personal code can be used straight away. There is no waiting period. However, you can only provide it during the correct filing window - for existing directors, this is at the next confirmation statement; for PSCs, during their 14-day window.
       </p>
 
       <h2>What if the code does not work?</h2>
@@ -1153,14 +1153,14 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Although the code is the same, you must provide it individually for each company role. This means:
       </p>
       <ul>
-        <li>If you are a director of three companies, you provide the code three times — once for each confirmation statement</li>
-        <li>If you are both a director and a PSC of the same company, you provide the code twice — once for the directorship and once for the PSC position</li>
+        <li>If you are a director of three companies, you provide the code three times - once for each confirmation statement</li>
+        <li>If you are both a director and a PSC of the same company, you provide the code twice - once for the directorship and once for the PSC position</li>
         <li>Each provision links your verified identity to that specific role at that specific company</li>
       </ul>
 
       <h2>Does this cost extra?</h2>
       <p>
-        No. You verify your identity once and pay once. The personal code itself is free to use — there is no additional charge for providing it to multiple companies. With Companies House ID Verification, the single <strong>£19 fee</strong> covers your verification regardless of how many roles you hold.
+        No. You verify your identity once and pay once. The personal code itself is free to use - there is no additional charge for providing it to multiple companies. With Companies House ID Verification, the single <strong>£19 fee</strong> covers your verification regardless of how many roles you hold.
       </p>
 
       <h2>What if you gain a new role?</h2>
@@ -1189,11 +1189,11 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>How to recover a lost personal code</h2>
       <ol>
-        <li><strong>Check your emails</strong> — search for the original notification from Companies House or your ACSP</li>
-        <li><strong>Log in to your verification account</strong> — your code may be displayed in the account dashboard</li>
-        <li><strong>Contact your ACSP</strong> — if you verified through an ACSP, they should be able to help you retrieve it</li>
-        <li><strong>Check your GOV.UK One Login account</strong> — if you verified through GOV.UK One Login, your code should be accessible there</li>
-        <li><strong>Contact Companies House</strong> — Companies House can help you recover access to your personal code</li>
+        <li><strong>Check your emails</strong> - search for the original notification from Companies House or your ACSP</li>
+        <li><strong>Log in to your verification account</strong> - your code may be displayed in the account dashboard</li>
+        <li><strong>Contact your ACSP</strong> - if you verified through an ACSP, they should be able to help you retrieve it</li>
+        <li><strong>Check your GOV.UK One Login account</strong> - if you verified through GOV.UK One Login, your code should be accessible there</li>
+        <li><strong>Contact Companies House</strong> - Companies House can help you recover access to your personal code</li>
       </ol>
 
       <h2>Should you be worried about security?</h2>
@@ -1233,7 +1233,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Common cause 2: Name mismatch</h2>
       <p>
-        Your personal code is linked to the name used during verification. If the name on the Companies House register is different — a missing middle name, different spelling, or a name change — the code may not link correctly. Check the register and update it if necessary before retrying.
+        Your personal code is linked to the name used during verification. If the name on the Companies House register is different - a missing middle name, different spelling, or a name change - the code may not link correctly. Check the register and update it if necessary before retrying.
       </p>
 
       <h2>Common cause 3: Wrong filing window</h2>
@@ -1272,7 +1272,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 1: Confirm your verification is complete</h2>
       <p>
-        The most common reason for not receiving a personal code is that verification is still in progress. Log in to the service you used — GOV.UK One Login or your ACSP — and check the status of your verification. If it shows as &ldquo;pending&rdquo;, &ldquo;in progress&rdquo; or &ldquo;under review&rdquo;, your code has not been issued yet.
+        The most common reason for not receiving a personal code is that verification is still in progress. Log in to the service you used - GOV.UK One Login or your ACSP - and check the status of your verification. If it shows as &ldquo;pending&rdquo;, &ldquo;in progress&rdquo; or &ldquo;under review&rdquo;, your code has not been issued yet.
       </p>
 
       <h2>Step 2: Check all email folders</h2>
@@ -1298,7 +1298,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 5: Allow time for processing</h2>
       <p>
-        If you verified recently, allow a reasonable period for the process to complete. Through Companies House ID Verification, most verifications are completed within the same working day. If additional checks are needed, it may take longer — you will be notified.
+        If you verified recently, allow a reasonable period for the process to complete. Through Companies House ID Verification, most verifications are completed within the same working day. If additional checks are needed, it may take longer - you will be notified.
       </p>
 
       <h2>Step 6: Contact the verification service</h2>
@@ -1306,8 +1306,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         If none of the above steps resolve the issue, contact the service you used:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — use the government&rsquo;s help and support pages</li>
-        <li><strong>ACSP</strong> — contact the ACSP directly. If you used Companies House ID Verification, email <a href="mailto:support@companieshouseidverification.com">support@companieshouseidverification.com</a></li>
+        <li><strong>GOV.UK One Login</strong> - use the government&rsquo;s help and support pages</li>
+        <li><strong>ACSP</strong> - contact the ACSP directly. If you used Companies House ID Verification, email <a href="mailto:support@companieshouseidverification.com">support@companieshouseidverification.com</a></li>
       </ul>
 
       <h2>Step 7: Contact Companies House</h2>
@@ -1317,7 +1317,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Prevent future issues</h2>
       <p>
-        When you receive your code, immediately save it in a secure location — a password manager is ideal. This avoids the need to search for it again.
+        When you receive your code, immediately save it in a secure location - a password manager is ideal. This avoids the need to search for it again.
       </p>
       <p>
         Need to start verification? <Link href="/start">Begin the process</Link> with Companies House ID Verification.
@@ -1357,7 +1357,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What if your name changes?</h2>
       <p>
-        If your legal name changes (through marriage, divorce or deed poll), you should update your details at Companies House. In most cases, your existing personal code will remain valid — the code is linked to your identity, not just your name. However, if the change creates a verification issue, Companies House will advise on whether a new code is needed.
+        If your legal name changes (through marriage, divorce or deed poll), you should update your details at Companies House. In most cases, your existing personal code will remain valid - the code is linked to your identity, not just your name. However, if the change creates a verification issue, Companies House will advise on whether a new code is needed.
       </p>
 
       <h2>Keeping your code secure</h2>
@@ -1401,7 +1401,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Why do people confuse them?</h2>
       <p>
-        Both are codes issued by Companies House, and both are used in filings. The confusion often arises when someone is asked to &ldquo;provide your code&rdquo; during a filing — they may not know whether this means their personal code, the company number or the authentication code.
+        Both are codes issued by Companies House, and both are used in filings. The confusion often arises when someone is asked to &ldquo;provide your code&rdquo; during a filing - they may not know whether this means their personal code, the company number or the authentication code.
       </p>
 
       <h2>What about the authentication code?</h2>
@@ -1409,9 +1409,9 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         There is also a third code: the <strong>authentication code</strong>, a 6-character code issued to the company for online filing. This is different from both the personal code and the company number.
       </p>
       <ul>
-        <li><strong>Personal code</strong> — identifies you (the individual)</li>
-        <li><strong>Company number</strong> — identifies the company</li>
-        <li><strong>Authentication code</strong> — authorises online filings for the company</li>
+        <li><strong>Personal code</strong> - identifies you (the individual)</li>
+        <li><strong>Company number</strong> - identifies the company</li>
+        <li><strong>Authentication code</strong> - authorises online filings for the company</li>
       </ul>
 
       <h2>Get your personal code</h2>
@@ -1435,7 +1435,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         <li><strong>What it does:</strong> Links your verified identity to your company roles (directorships, PSC positions, LLP memberships)</li>
         <li><strong>How you get it:</strong> By completing identity verification through GOV.UK One Login or an ACSP</li>
         <li><strong>When it was introduced:</strong> Under ECCTA, from November 2025</li>
-        <li><strong>How often you need it:</strong> Once per role you hold — provided during confirmation statements and appointments</li>
+        <li><strong>How often you need it:</strong> Once per role you hold - provided during confirmation statements and appointments</li>
       </ul>
 
       <h2>The authentication code</h2>
@@ -1539,7 +1539,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 1: Check your eligibility and deadline</h2>
       <p>
-        As a director, you must verify — there is no exemption. Your deadline depends on when you were appointed:
+        As a director, you must verify - there is no exemption. Your deadline depends on when you were appointed:
       </p>
       <ul>
         <li><strong>New directors</strong> (after 18 November 2025): verify before the appointment is registered</li>
@@ -1548,8 +1548,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 2: Choose your verification route</h2>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — free, but only accepts UK passport or UK driving licence</li>
-        <li><strong>An ACSP</strong> — accepts broader documents including international passports. Companies House ID Verification offers this for <strong>£19</strong></li>
+        <li><strong>GOV.UK One Login</strong> - free, but only accepts UK passport or UK driving licence</li>
+        <li><strong>An ACSP</strong> - accepts broader documents including international passports. Companies House ID Verification offers this for <strong>£19</strong></li>
       </ul>
 
       <h2>Step 3: Prepare your documents</h2>
@@ -1573,7 +1573,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Step 5: Receive your personal code</h2>
       <p>
-        After successful verification, you receive your 11-character personal code. Store it securely — you will need it for the next step and for future filings.
+        After successful verification, you receive your 11-character personal code. Store it securely - you will need it for the next step and for future filings.
       </p>
 
       <h2>Step 6: Provide your code for each directorship</h2>
@@ -1621,8 +1621,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         Directors can verify through:
       </p>
       <ul>
-        <li><strong>GOV.UK One Login</strong> — free, but only UK passport or driving licence accepted</li>
-        <li><strong>An ACSP</strong> — broader document acceptance, guided support, available for international directors</li>
+        <li><strong>GOV.UK One Login</strong> - free, but only UK passport or driving licence accepted</li>
+        <li><strong>An ACSP</strong> - broader document acceptance, guided support, available for international directors</li>
       </ul>
       <p>
         Companies House ID Verification provides an ACSP route for <strong>£19 per director</strong>.
@@ -1653,7 +1653,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "companies-house-director-id-verification-complete-guide": (
     <>
       <p>
-        This is the <strong>complete guide to Companies House director ID verification</strong> — everything you need to know from start to finish. If you are a director of a UK company, this guide covers your obligations, the process, the deadlines and the consequences.
+        This is the <strong>complete guide to Companies House director ID verification</strong> - everything you need to know from start to finish. If you are a director of a UK company, this guide covers your obligations, the process, the deadlines and the consequences.
       </p>
 
       <h2>Your obligation</h2>
@@ -1663,10 +1663,10 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>The process in full</h2>
       <ol>
-        <li><strong>Choose a route</strong> — GOV.UK One Login (free, UK documents only) or an ACSP (broader documents, guided support)</li>
-        <li><strong>Gather documents</strong> — valid photo ID, personal details matching the Companies House register, company numbers</li>
-        <li><strong>Complete verification</strong> — submit your document, pass the liveness check, receive your personal code</li>
-        <li><strong>Provide your code</strong> — link it to each directorship via the confirmation statement</li>
+        <li><strong>Choose a route</strong> - GOV.UK One Login (free, UK documents only) or an ACSP (broader documents, guided support)</li>
+        <li><strong>Gather documents</strong> - valid photo ID, personal details matching the Companies House register, company numbers</li>
+        <li><strong>Complete verification</strong> - submit your document, pass the liveness check, receive your personal code</li>
+        <li><strong>Provide your code</strong> - link it to each directorship via the confirmation statement</li>
       </ol>
 
       <h2>Accepted documents</h2>
@@ -1726,7 +1726,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
         If you were appointed as a director on or after <strong>18 November 2025</strong>, you must verify your identity <em>before</em> Companies House will register your appointment. This means the company cannot file your appointment until you have completed verification and received your personal code.
       </p>
       <p>
-        For new directors, verification is a prerequisite — not something you can do later.
+        For new directors, verification is a prerequisite - not something you can do later.
       </p>
 
       <h2>Existing directors: by November 2026</h2>
@@ -1747,7 +1747,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What if you miss your window?</h2>
       <p>
-        Missing your 14-day window does not mean you cannot verify — it means you may be in breach of the requirement. Complete verification as soon as possible. The consequences of non-compliance include register notations, filing restrictions and potential criminal liability.
+        Missing your 14-day window does not mean you cannot verify - it means you may be in breach of the requirement. Complete verification as soon as possible. The consequences of non-compliance include register notations, filing restrictions and potential criminal liability.
       </p>
 
       <h2>The best approach: verify early</h2>
@@ -1761,7 +1761,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "what-happens-if-director-doesnt-complete-identity-verification": (
     <>
       <p>
-        If a director <strong>does not complete Companies House identity verification</strong> before the deadline, the consequences are serious — both personally and for the company.
+        If a director <strong>does not complete Companies House identity verification</strong> before the deadline, the consequences are serious - both personally and for the company.
       </p>
 
       <h2>Criminal liability</h2>
@@ -1771,7 +1771,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Public register notation</h2>
       <p>
-        Companies House will add a visible annotation to the register against any unverified director. This is public information — anyone searching the company can see it, including banks, investors, partners and potential clients.
+        Companies House will add a visible annotation to the register against any unverified director. This is public information - anyone searching the company can see it, including banks, investors, partners and potential clients.
       </p>
 
       <h2>Restrictions on the director</h2>
@@ -1793,7 +1793,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Can the company force a director to verify?</h2>
       <p>
-        The company cannot complete verification on behalf of a director — it is an individual obligation. However, the company can and should make its directors aware of the requirement and the deadline. Many companies are proactively arranging verification for their directors.
+        The company cannot complete verification on behalf of a director - it is an individual obligation. However, the company can and should make its directors aware of the requirement and the deadline. Many companies are proactively arranging verification for their directors.
       </p>
 
       <h2>What to do now</h2>
@@ -1827,8 +1827,8 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What does not change</h2>
       <ul>
-        <li>Your directorship itself — verification does not affect your appointment</li>
-        <li>Your powers as a director — you retain all existing authority</li>
+        <li>Your directorship itself - verification does not affect your appointment</li>
+        <li>Your powers as a director - you retain all existing authority</li>
         <li>Your company&rsquo;s structure or operations</li>
       </ul>
 
@@ -1840,12 +1840,12 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What happens if you do not verify by the deadline</h2>
       <p>
-        After your deadline, the consequences described above apply — register notation, filing restrictions and criminal liability. There is no automatic extension.
+        After your deadline, the consequences described above apply - register notation, filing restrictions and criminal liability. There is no automatic extension.
       </p>
 
       <h2>The recommended approach</h2>
       <p>
-        Verify early. The process is straightforward — about 15 minutes through Companies House ID Verification, at a fixed <strong>£19</strong>. Completing it now removes the deadline pressure and ensures your personal code is ready when needed.
+        Verify early. The process is straightforward - about 15 minutes through Companies House ID Verification, at a fixed <strong>£19</strong>. Completing it now removes the deadline pressure and ensures your personal code is ready when needed.
       </p>
       <p>
         <Link href="/start">Start your verification</Link> today.
@@ -1889,7 +1889,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>What if the new director is overseas?</h2>
       <p>
-        International directors have the same requirement. Companies House ID Verification accepts international passports and supports directors from any country. The entire process is completed online — no UK visit is needed.
+        International directors have the same requirement. Companies House ID Verification accepts international passports and supports directors from any country. The entire process is completed online - no UK visit is needed.
       </p>
 
       <h2>What does this cost?</h2>
@@ -1908,7 +1908,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
   "companies-house-verification-for-directors-of-multiple-companies": (
     <>
       <p>
-        If you are a director of more than one company, <strong>Companies House verification</strong> works the same way — verify once, use one personal code, but provide it separately for each directorship.
+        If you are a director of more than one company, <strong>Companies House verification</strong> works the same way - verify once, use one personal code, but provide it separately for each directorship.
       </p>
 
       <h2>One verification, one code</h2>
@@ -1977,7 +1977,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>You still need to provide the code regularly</h2>
       <p>
-        While you only verify once, you must provide your personal code each time it is required — typically in your company&rsquo;s annual confirmation statement. This is not re-verification; it is confirming your code for that filing.
+        While you only verify once, you must provide your personal code each time it is required - typically in your company&rsquo;s annual confirmation statement. This is not re-verification; it is confirming your code for that filing.
       </p>
 
       <h2>Multiple companies</h2>
@@ -1987,7 +1987,7 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>Verify once now</h2>
       <p>
-        Complete your one-time verification with Companies House ID Verification for <strong>£19</strong>. <Link href="/start">Start the process</Link> — one verification covers all your current and future roles.
+        Complete your one-time verification with Companies House ID Verification for <strong>£19</strong>. <Link href="/start">Start the process</Link> - one verification covers all your current and future roles.
       </p>
       <CtaBlock />
     </>
@@ -2022,14 +2022,14 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>If your agent or accountant files for you</h2>
       <p>
-        If someone else files the confirmation statement on your behalf, you will need to provide them with your personal code. Share it securely — not by unencrypted email. Use a secure portal, encrypted messaging or a phone call.
+        If someone else files the confirmation statement on your behalf, you will need to provide them with your personal code. Share it securely - not by unencrypted email. Use a secure portal, encrypted messaging or a phone call.
       </p>
 
       <h2>Common problems</h2>
       <ul>
-        <li><strong>Code not accepted</strong> — check for typing errors, especially between similar characters (O/0, I/1)</li>
-        <li><strong>Name mismatch</strong> — your verified name must match the name on the Companies House register exactly</li>
-        <li><strong>Outside your filing window</strong> — the code can only be linked during the correct filing period</li>
+        <li><strong>Code not accepted</strong> - check for typing errors, especially between similar characters (O/0, I/1)</li>
+        <li><strong>Name mismatch</strong> - your verified name must match the name on the Companies House register exactly</li>
+        <li><strong>Outside your filing window</strong> - the code can only be linked during the correct filing period</li>
       </ul>
 
       <h2>Multiple directorships</h2>
@@ -2053,25 +2053,25 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
 
       <h2>The requirement</h2>
       <p>
-        Since 18 November 2025, Companies House requires that all new director appointments include a verified personal code. Without it, the appointment filing will be rejected. This means that as a new director, verification is the first step — not something you can do after taking office.
+        Since 18 November 2025, Companies House requires that all new director appointments include a verified personal code. Without it, the appointment filing will be rejected. This means that as a new director, verification is the first step - not something you can do after taking office.
       </p>
 
       <h2>The process for new directors</h2>
       <ol>
-        <li><strong>Verify your identity</strong> — through GOV.UK One Login (free, UK documents only) or an ACSP such as Companies House ID Verification (£19, broader document support)</li>
-        <li><strong>Receive your personal code</strong> — your 11-character code is issued after successful verification</li>
-        <li><strong>Provide the code with your appointment</strong> — the company includes your personal code when filing the AP01 form (appointment of a director)</li>
-        <li><strong>Appointment is registered</strong> — Companies House processes the filing and records your directorship</li>
+        <li><strong>Verify your identity</strong> - through GOV.UK One Login (free, UK documents only) or an ACSP such as Companies House ID Verification (£19, broader document support)</li>
+        <li><strong>Receive your personal code</strong> - your 11-character code is issued after successful verification</li>
+        <li><strong>Provide the code with your appointment</strong> - the company includes your personal code when filing the AP01 form (appointment of a director)</li>
+        <li><strong>Appointment is registered</strong> - Companies House processes the filing and records your directorship</li>
       </ol>
 
       <h2>How long before the appointment should you verify?</h2>
       <p>
-        Verify well before the planned appointment date. Through Companies House ID Verification, most verifications are completed within the same working day — but allow extra time in case additional checks are needed. A week&rsquo;s lead time is a safe margin.
+        Verify well before the planned appointment date. Through Companies House ID Verification, most verifications are completed within the same working day - but allow extra time in case additional checks are needed. A week&rsquo;s lead time is a safe margin.
       </p>
 
       <h2>What if you already have a personal code?</h2>
       <p>
-        If you have already verified — for example, as a director of another company — you can use the same personal code for the new appointment. No additional verification is needed.
+        If you have already verified - for example, as a director of another company - you can use the same personal code for the new appointment. No additional verification is needed.
       </p>
 
       <h2>International new directors</h2>

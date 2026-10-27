@@ -80,7 +80,7 @@ export function WorldpayReturn({
         <h2 className="m-0 text-lg font-extrabold">Confirming your payment…</h2>
         <p className="mt-2 text-sm text-muted-text">
           We&rsquo;re confirming your {amountLabel} card payment with WorldPay. This usually takes a few
-          seconds — please don&rsquo;t close this page.
+          seconds - please don&rsquo;t close this page.
         </p>
       </section>
     );
@@ -92,7 +92,7 @@ export function WorldpayReturn({
         <h2 className="m-0 text-lg font-extrabold">Payment is being confirmed</h2>
         <p className="mt-2 text-sm text-muted-text">
           Your payment has been submitted but WorldPay hasn&rsquo;t confirmed it yet. We&rsquo;ll email you
-          and unlock your application as soon as it clears — you don&rsquo;t need to pay again.
+          and unlock your application as soon as it clears - you don&rsquo;t need to pay again.
         </p>
         <Link href={`/dashboard/orders/${orderReference}`} className="button button-primary mt-5 inline-flex">
           Go to my order
@@ -110,7 +110,7 @@ export function WorldpayReturn({
       <p className="mt-2 text-sm text-muted-text">
         {phase === "cancelled"
           ? "You cancelled the payment before it completed. You can try again whenever you're ready."
-          : "Your card payment could not be completed. No money has been taken — please try again or use another method."}
+          : "Your card payment could not be completed. No money has been taken - please try again or use another method."}
       </p>
       <div className="mt-5 flex flex-wrap gap-3">
         <Link href={`/payment/card/${orderReference}`} className="button button-primary">

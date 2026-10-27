@@ -40,7 +40,7 @@ export function SiteFooter() {
           <div>
             <Logo />
             <p className="mt-5 max-w-[300px] text-[14px] leading-7" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Companies House identity verification for directors, PSCs, LLP members and authorised filers — in the UK and worldwide.
+              Companies House identity verification for directors, PSCs, LLP members and authorised filers - in the UK and worldwide.
             </p>
             <a
               href="mailto:support@companieshouseidverification.com"

@@ -98,7 +98,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Companies House ID Verification — ACSP Approved Identity Verification Service",
+        alt: "Companies House ID Verification - ACSP Approved Identity Verification Service",
       },
     ],
   },

@@ -30,7 +30,7 @@ export type Article = {
 };
 
 /*
- * EDITORIAL OVERLAP GROUPS — consolidate before publishing both in any pair.
+ * EDITORIAL OVERLAP GROUPS - consolidate before publishing both in any pair.
  *
  * Personal Code:
  *   "how-to-find-your-companies-house-personal-code" ↔ "where-can-i-find-my-companies-house-personal-code"
@@ -99,7 +99,7 @@ export const articles: Article[] = [
     image: "/images/compliance-advisor-reviewing-documents.jpg",
     alt: "Advisor reviewing identity documents for Companies House verification",
     slug: "companies-house-id-verification-step-by-step-guide",
-    published: true, // overlaps "how-to-verify-your-identity-for-companies-house" — consolidate before publishing
+    published: true, // overlaps "how-to-verify-your-identity-for-companies-house" - consolidate before publishing
   },
   {
     category: "General",
@@ -155,7 +155,7 @@ export const articles: Article[] = [
     image: "/images/international-professional-remote-work.jpg",
     alt: "Professional reviewing mandatory Companies House verification requirements",
     slug: "is-companies-house-id-verification-mandatory",
-    published: true, // overlaps "who-needs-to-complete-companies-house-identity-verification" — consolidate before publishing
+    published: true, // overlaps "who-needs-to-complete-companies-house-identity-verification" - consolidate before publishing
   },
   {
     category: "General",
@@ -596,7 +596,7 @@ export const articles: Article[] = [
     category: "PSC",
     title: "Do PSCs Need to Complete Companies House Identity Verification?",
     description:
-      "Yes — persons with significant control must verify their identity with Companies House. Learn the PSC verification requirement, deadlines and how to complete it.",
+      "Yes - persons with significant control must verify their identity with Companies House. Learn the PSC verification requirement, deadlines and how to complete it.",
     keywords:
       "do PSCs need to verify identity, PSC identity verification, Companies House PSC verification required, PSC verification mandatory, person with significant control verification",
     date: "October 2026",
@@ -624,7 +624,7 @@ export const articles: Article[] = [
     category: "PSC",
     title: "Companies House PSC Verification: Complete Guide",
     description:
-      "Everything you need to know about Companies House PSC verification — who qualifies as a PSC, when to verify, accepted documents and how to link your personal code.",
+      "Everything you need to know about Companies House PSC verification - who qualifies as a PSC, when to verify, accepted documents and how to link your personal code.",
     keywords:
       "Companies House PSC verification, PSC verification guide, Companies House PSC ID verification, PSC verification complete guide, PSC identity verification UK, Companies House PSC requirements",
     date: "October 2026",
@@ -638,7 +638,7 @@ export const articles: Article[] = [
     category: "PSC",
     title: "Companies House PSC ID Verification Explained",
     description:
-      "A clear explanation of Companies House PSC ID verification — what it involves, why it was introduced under ECCTA, and the two routes available to PSCs.",
+      "A clear explanation of Companies House PSC ID verification - what it involves, why it was introduced under ECCTA, and the two routes available to PSCs.",
     keywords:
       "Companies House PSC ID verification explained, PSC ID verification, PSC identity check explained, Companies House PSC ID check, PSC verification ECCTA, what is PSC ID verification",
     date: "October 2026",
@@ -680,7 +680,7 @@ export const articles: Article[] = [
     category: "PSC",
     title: "How to Provide Your Personal Code as a PSC",
     description:
-      "A practical guide to providing your Companies House personal code for each PSC role — when to supply it, which service to use and what happens after linking.",
+      "A practical guide to providing your Companies House personal code for each PSC role - when to supply it, which service to use and what happens after linking.",
     keywords:
       "how to provide personal code as PSC, PSC personal code linking, connect personal code PSC, supply personal code Companies House, PSC code confirmation statement",
     date: "October 2026",
@@ -694,7 +694,7 @@ export const articles: Article[] = [
     category: "PSC",
     title: "What Happens If a PSC Doesn’t Complete Identity Verification?",
     description:
-      "The consequences of missing PSC identity verification — from public register annotations to criminal liability and company filing restrictions.",
+      "The consequences of missing PSC identity verification - from public register annotations to criminal liability and company filing restrictions.",
     keywords:
       "PSC not verified consequences, PSC verification penalty, PSC identity verification failure, what happens if PSC doesn't verify, unverified PSC Companies House, PSC verification criminal offence",
     date: "October 2026",
@@ -708,7 +708,7 @@ export const articles: Article[] = [
     category: "PSC",
     title: "Companies House PSC Verification Deadline Explained",
     description:
-      "Full breakdown of the Companies House PSC verification deadline — the November 2026 backstop, individual 14-day windows and how the transition period works for existing PSCs.",
+      "Full breakdown of the Companies House PSC verification deadline - the November 2026 backstop, individual 14-day windows and how the transition period works for existing PSCs.",
     keywords:
       "Companies House PSC verification deadline, PSC deadline 2026, PSC verification deadline explained, Companies House PSC deadline November 2026, PSC verification transition period",
     date: "October 2026",
@@ -738,7 +738,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "What Is an Authorised Corporate Service Provider (ACSP)?",
     description:
-      "A detailed explanation of Authorised Corporate Service Providers — their role in Companies House identity verification, how they are regulated and what services they offer.",
+      "A detailed explanation of Authorised Corporate Service Providers - their role in Companies House identity verification, how they are regulated and what services they offer.",
     keywords:
       "authorised corporate service provider, ACSP, what is an ACSP, authorised corporate service provider explained, ACSP identity verification, ACSP role Companies House",
     date: "October 2026",
@@ -752,7 +752,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "How Does a Companies House ACSP Verify Your Identity?",
     description:
-      "Understand the identity verification process through an ACSP — document checks, liveness verification, data matching and how your personal code is issued.",
+      "Understand the identity verification process through an ACSP - document checks, liveness verification, data matching and how your personal code is issued.",
     keywords:
       "how does ACSP verify identity, ACSP verification process, ACSP identity check, Companies House ACSP verification process, how ACSP works, ACSP document verification",
     date: "October 2026",
@@ -766,7 +766,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "How to Find a Companies House ACSP",
     description:
-      "Where to find an Authorised Corporate Service Provider for Companies House identity verification — the official register, what to look for and how to check an ACSP is genuine.",
+      "Where to find an Authorised Corporate Service Provider for Companies House identity verification - the official register, what to look for and how to check an ACSP is genuine.",
     keywords:
       "how to find Companies House ACSP, find ACSP, Companies House ACSP list, ACSP register, find authorised corporate service provider, Companies House ACSP online",
     date: "October 2026",
@@ -780,7 +780,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "Companies House ACSP Verification: Complete Guide",
     description:
-      "Everything you need to know about verifying your identity through a Companies House ACSP — the process, costs, documents needed and how it compares to GOV.UK One Login.",
+      "Everything you need to know about verifying your identity through a Companies House ACSP - the process, costs, documents needed and how it compares to GOV.UK One Login.",
     keywords:
       "Companies House ACSP verification, ACSP verification guide, ACSP verification complete guide, Companies House ACSP identity verification, ACSP verification process UK",
     date: "October 2026",
@@ -794,7 +794,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "Companies House Authorised Agent vs ACSP: What’s the Difference?",
     description:
-      "Understand the difference between a Companies House authorised agent and an ACSP — their distinct roles, responsibilities and how each relates to identity verification.",
+      "Understand the difference between a Companies House authorised agent and an ACSP - their distinct roles, responsibilities and how each relates to identity verification.",
     keywords:
       "Companies House authorised agent vs ACSP, authorised agent ACSP difference, Companies House agent, ACSP vs authorised agent, Companies House filing agent, authorised agent verification",
     date: "October 2026",
@@ -808,7 +808,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "How Much Does an ACSP Charge for Companies House Verification?",
     description:
-      "A guide to ACSP pricing for Companies House identity verification — typical costs, what the fee covers and how to compare services.",
+      "A guide to ACSP pricing for Companies House identity verification - typical costs, what the fee covers and how to compare services.",
     keywords:
       "ACSP cost, ACSP charge Companies House verification, how much does ACSP cost, ACSP verification fee, Companies House ACSP price, ACSP identity verification cost",
     date: "October 2026",
@@ -822,7 +822,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "Should You Use an ACSP for Companies House Identity Verification?",
     description:
-      "Weighing up whether to use an ACSP or GOV.UK One Login for Companies House identity verification — advantages, limitations and which route suits your circumstances.",
+      "Weighing up whether to use an ACSP or GOV.UK One Login for Companies House identity verification - advantages, limitations and which route suits your circumstances.",
     keywords:
       "should you use ACSP, ACSP vs self verification, ACSP advantages, why use ACSP Companies House, ACSP benefits, ACSP identity verification advantages",
     date: "October 2026",
@@ -836,7 +836,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "Companies House ACSP vs GOV.UK One Login: Which Is Better?",
     description:
-      "A detailed comparison of the two Companies House identity verification routes — ACSP and GOV.UK One Login — covering documents accepted, speed, cost and international support.",
+      "A detailed comparison of the two Companies House identity verification routes - ACSP and GOV.UK One Login - covering documents accepted, speed, cost and international support.",
     keywords:
       "ACSP vs GOV.UK One Login, Companies House ACSP vs One Login, ACSP or One Login, Companies House verification routes, GOV.UK One Login vs ACSP, which is better ACSP One Login",
     date: "October 2026",
@@ -850,7 +850,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "How Long Does ACSP Companies House Verification Take?",
     description:
-      "Realistic timelines for Companies House identity verification through an ACSP — what affects processing time and how to avoid delays.",
+      "Realistic timelines for Companies House identity verification through an ACSP - what affects processing time and how to avoid delays.",
     keywords:
       "how long does ACSP verification take, ACSP verification time, Companies House ACSP processing time, ACSP verification timeline, how fast is ACSP verification",
     date: "October 2026",
@@ -864,7 +864,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "Can an ACSP Verify My Identity From Overseas?",
     description:
-      "How ACSPs support international applicants with Companies House identity verification — overseas documents, remote processes and what to expect from abroad.",
+      "How ACSPs support international applicants with Companies House identity verification - overseas documents, remote processes and what to expect from abroad.",
     keywords:
       "ACSP verify identity overseas, ACSP international verification, ACSP overseas, ACSP foreign passport, ACSP verification from abroad, Companies House ACSP overseas",
     date: "October 2026",
@@ -878,7 +878,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "What Documents Does an ACSP Need for Companies House Verification?",
     description:
-      "The documents an ACSP typically requires to complete your Companies House identity verification — photo ID, proof of address and additional requirements for overseas applicants.",
+      "The documents an ACSP typically requires to complete your Companies House identity verification - photo ID, proof of address and additional requirements for overseas applicants.",
     keywords:
       "ACSP documents needed, ACSP document requirements, what documents for ACSP verification, ACSP identity documents, Companies House ACSP requirements, ACSP verification documents list",
     date: "October 2026",
@@ -892,7 +892,7 @@ export const articles: Article[] = [
     category: "ACSP",
     title: "How to Choose a Companies House Authorised Corporate Service Provider",
     description:
-      "Practical advice on choosing the right ACSP for Companies House identity verification — what to check, red flags to avoid and how to verify an ACSP is genuine.",
+      "Practical advice on choosing the right ACSP for Companies House identity verification - what to check, red flags to avoid and how to verify an ACSP is genuine.",
     keywords:
       "how to choose ACSP, choose authorised corporate service provider, best ACSP Companies House, ACSP selection guide, choosing Companies House ACSP, ACSP comparison",
     date: "October 2026",
@@ -908,7 +908,7 @@ export const articles: Article[] = [
     category: "International",
     title: "How to Complete Companies House ID Verification From Abroad",
     description:
-      "A practical guide to completing Companies House identity verification from outside the UK — remote process, accepted documents, time zones and international support.",
+      "A practical guide to completing Companies House identity verification from outside the UK - remote process, accepted documents, time zones and international support.",
     keywords:
       "Companies House ID verification from abroad, verify identity from abroad, Companies House verification overseas, Companies House verification from outside UK, international Companies House verification",
     date: "October 2026",
@@ -922,7 +922,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Identity Verification for Overseas Directors",
     description:
-      "How overseas directors complete Companies House identity verification — accepted foreign documents, the remote ACSP route and common challenges for non-UK residents.",
+      "How overseas directors complete Companies House identity verification - accepted foreign documents, the remote ACSP route and common challenges for non-UK residents.",
     keywords:
       "Companies House verification overseas directors, overseas director verification, Companies House identity verification overseas, non-UK director verification, international director Companies House",
     date: "October 2026",
@@ -936,7 +936,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Verification for Non-UK Residents",
     description:
-      "Everything non-UK residents need to know about Companies House identity verification — eligibility, accepted documents, the ACSP route and how to verify without a UK address.",
+      "Everything non-UK residents need to know about Companies House identity verification - eligibility, accepted documents, the ACSP route and how to verify without a UK address.",
     keywords:
       "Companies House verification non-UK residents, non-UK resident verification, Companies House identity verification non-UK, verify identity without UK address, non-UK Companies House",
     date: "October 2026",
@@ -950,7 +950,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Can Foreign Directors Complete Companies House ID Verification?",
     description:
-      "Yes — foreign directors can complete Companies House ID verification remotely. Learn the process, accepted foreign documents and the ACSP route for international applicants.",
+      "Yes - foreign directors can complete Companies House ID verification remotely. Learn the process, accepted foreign documents and the ACSP route for international applicants.",
     keywords:
       "foreign directors Companies House verification, can foreign directors verify, Companies House ID verification foreign directors, foreign director identity verification UK",
     date: "October 2026",
@@ -964,7 +964,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Identity Verification for Foreign Directors",
     description:
-      "A comprehensive guide for foreign directors who need to verify their identity with Companies House — from document preparation to receiving your personal code.",
+      "A comprehensive guide for foreign directors who need to verify their identity with Companies House - from document preparation to receiving your personal code.",
     keywords:
       "Companies House identity verification foreign directors, foreign director verification, Companies House foreign director, identity verification foreign director UK company",
     date: "October 2026",
@@ -978,7 +978,7 @@ export const articles: Article[] = [
     category: "International",
     title: "How to Verify a UK Company Director From Overseas",
     description:
-      "Practical guidance for verifying a UK company director’s identity from overseas — the remote process, accepted international documents and tips for avoiding delays.",
+      "Practical guidance for verifying a UK company director’s identity from overseas - the remote process, accepted international documents and tips for avoiding delays.",
     keywords:
       "verify UK company director from overseas, overseas director verification UK, UK company director verification abroad, Companies House director verification overseas",
     date: "October 2026",
@@ -992,7 +992,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Verification From Outside the UK",
     description:
-      "How to complete Companies House identity verification from outside the UK — the end-to-end remote process, what you need and how long it takes.",
+      "How to complete Companies House identity verification from outside the UK - the end-to-end remote process, what you need and how long it takes.",
     keywords:
       "Companies House verification from outside UK, verify identity outside UK, Companies House verification abroad, Companies House international verification, verification from overseas",
     date: "October 2026",
@@ -1006,7 +1006,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House ID Verification for Foreigners",
     description:
-      "A guide to Companies House ID verification for foreign nationals — whether you live in the UK or abroad, how to verify using a foreign passport and what support is available.",
+      "A guide to Companies House ID verification for foreign nationals - whether you live in the UK or abroad, how to verify using a foreign passport and what support is available.",
     keywords:
       "Companies House ID verification foreigners, Companies House verification for foreigners, foreign national Companies House verification, Companies House identity check foreigners",
     date: "October 2026",
@@ -1020,7 +1020,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Verification Using a Foreign Passport",
     description:
-      "Can you use a foreign passport for Companies House identity verification? Yes — learn which passports are accepted, any additional requirements and how the process works.",
+      "Can you use a foreign passport for Companies House identity verification? Yes - learn which passports are accepted, any additional requirements and how the process works.",
     keywords:
       "Companies House verification foreign passport, foreign passport Companies House, verify identity foreign passport, Companies House accepted passports, overseas passport verification",
     date: "October 2026",
@@ -1034,7 +1034,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Can I Complete Companies House Verification From Another Country?",
     description:
-      "Yes — Companies House identity verification can be completed remotely from any country. Learn how the process works internationally and what you need to get started.",
+      "Yes - Companies House identity verification can be completed remotely from any country. Learn how the process works internationally and what you need to get started.",
     keywords:
       "Companies House verification another country, complete Companies House verification abroad, Companies House verification remote, Companies House verification from any country",
     date: "October 2026",
@@ -1048,7 +1048,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Verification for International Business Owners",
     description:
-      "How international business owners with UK companies complete Companies House identity verification — the requirements, remote process and practical tips for a smooth experience.",
+      "How international business owners with UK companies complete Companies House identity verification - the requirements, remote process and practical tips for a smooth experience.",
     keywords:
       "Companies House verification international business owners, international business owner verification, Companies House international, overseas business owner verification UK",
     date: "October 2026",
@@ -1062,7 +1062,7 @@ export const articles: Article[] = [
     category: "International",
     title: "Companies House Identity Verification for Overseas PSCs",
     description:
-      "How overseas persons with significant control complete Companies House identity verification — the remote ACSP route, accepted international documents and PSC-specific requirements.",
+      "How overseas persons with significant control complete Companies House identity verification - the remote ACSP route, accepted international documents and PSC-specific requirements.",
     keywords:
       "Companies House verification overseas PSC, overseas PSC verification, PSC verification abroad, international PSC Companies House, overseas PSC identity verification",
     date: "October 2026",

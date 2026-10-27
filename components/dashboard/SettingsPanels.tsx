@@ -317,7 +317,7 @@ export function SettingsPanels({ initial }: { initial: Status }) {
         <section className="dash-panel">
           <p className="eyebrow">Email (SMTP)</p>
           <p className="settings__lead">Configure each mailbox with its own Hostinger SMTP login.</p>
-          <p className="mb-3 font-bold">Authentication mail — no-reply@companieshouseidverification.com</p>
+          <p className="mb-3 font-bold">Authentication mail - no-reply@companieshouseidverification.com</p>
           <div className="settings__grid">
             <label className="dash-label">
               SMTP host
@@ -349,7 +349,7 @@ export function SettingsPanels({ initial }: { initial: Status }) {
               Test no-reply
             </button>
           </div>
-          <p className="mb-3 mt-8 font-bold">Customer communications — support@companieshouseidverification.com</p>
+          <p className="mb-3 mt-8 font-bold">Customer communications - support@companieshouseidverification.com</p>
           <div className="settings__grid">
             <label className="dash-label">SMTP host<input className="dash-input" value={supportSmtp.supportSmtpHost} onChange={(e) => setSupportSmtp({ ...supportSmtp, supportSmtpHost: e.target.value })} placeholder="smtp.hostinger.com" /></label>
             <label className="dash-label">Port<input className="dash-input" value={supportSmtp.supportSmtpPort} onChange={(e) => setSupportSmtp({ ...supportSmtp, supportSmtpPort: e.target.value })} placeholder="465" /></label>
