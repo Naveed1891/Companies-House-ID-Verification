@@ -15,7 +15,7 @@ export default function Image() {
           flexDirection: "column",
           background: "#2e7d32",
           padding: "72px 80px",
-          fontFamily: "system-ui, -apple-system, sans-serif",
+          fontFamily: "sans-serif",
         }}
       >
         {/* ACSP badge */}
@@ -29,6 +29,8 @@ export default function Image() {
         >
           <div
             style={{
+              display: "flex",
+              alignItems: "center",
               background: "rgba(255,255,255,0.15)",
               border: "1.5px solid rgba(255,255,255,0.4)",
               borderRadius: 6,
@@ -37,7 +39,6 @@ export default function Image() {
               fontSize: 14,
               fontWeight: 700,
               letterSpacing: 1,
-              textTransform: "uppercase",
             }}
           >
             ACSP Approved
@@ -47,22 +48,26 @@ export default function Image() {
         {/* Main headline */}
         <div
           style={{
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            justifyContent: "center",
             color: "#ffffff",
             fontSize: 62,
             fontWeight: 800,
             lineHeight: 1.1,
             letterSpacing: -1,
-            flex: 1,
           }}
         >
-          Companies House
-          <br />
-          ID Verification
+          <span>Companies House</span>
+          <span>ID Verification</span>
         </div>
 
         {/* Tagline */}
         <div
           style={{
+            display: "flex",
+            flexDirection: "column",
             color: "rgba(255,255,255,0.88)",
             fontSize: 26,
             fontWeight: 400,
@@ -70,9 +75,8 @@ export default function Image() {
             lineHeight: 1.4,
           }}
         >
-          Identity verification for directors, PSCs &amp; LLP members
-          <br />
-          Fixed £19 fee · UK &amp; international applicants welcome
+          <span>Identity verification for directors, PSCs &amp; LLP members</span>
+          <span>Fixed £19 fee · UK &amp; international applicants welcome</span>
         </div>
 
         {/* Domain strip */}
@@ -85,11 +89,13 @@ export default function Image() {
             paddingTop: 24,
           }}
         >
-          <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 20, fontWeight: 500 }}>
+          <div style={{ display: "flex", color: "rgba(255,255,255,0.7)", fontSize: 20, fontWeight: 500 }}>
             companieshouseidverification.com
           </div>
           <div
             style={{
+              display: "flex",
+              alignItems: "center",
               background: "#ffffff",
               color: "#2e7d32",
               borderRadius: 8,

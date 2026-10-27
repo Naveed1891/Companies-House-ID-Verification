@@ -25,7 +25,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           flexDirection: "column",
           background: "#1b5e20",
           padding: "64px 80px",
-          fontFamily: "system-ui, -apple-system, sans-serif",
+          fontFamily: "sans-serif",
         }}
       >
         {/* Top bar */}
@@ -39,6 +39,8 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         >
           <div
             style={{
+              display: "flex",
+              alignItems: "center",
               background: "#2e7d32",
               borderRadius: 6,
               padding: "6px 14px",
@@ -46,12 +48,11 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               fontSize: 13,
               fontWeight: 700,
               letterSpacing: 1,
-              textTransform: "uppercase",
             }}
           >
             {category}
           </div>
-          <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 15, fontWeight: 500 }}>
+          <div style={{ display: "flex", color: "rgba(255,255,255,0.5)", fontSize: 15, fontWeight: 500 }}>
             companieshouseidverification.com
           </div>
         </div>
@@ -59,12 +60,14 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         {/* Article title */}
         <div
           style={{
+            display: "flex",
+            flex: 1,
+            alignItems: "center",
             color: "#ffffff",
             fontSize: title.length > 60 ? 44 : 52,
             fontWeight: 800,
             lineHeight: 1.2,
             letterSpacing: -0.5,
-            flex: 1,
           }}
         >
           {title}
@@ -81,11 +84,13 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             marginTop: 32,
           }}
         >
-          <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 18 }}>
+          <div style={{ display: "flex", color: "rgba(255,255,255,0.6)", fontSize: 18 }}>
             Companies House ID Verification
           </div>
           <div
             style={{
+              display: "flex",
+              alignItems: "center",
               background: "rgba(46,125,50,0.35)",
               border: "1.5px solid rgba(46,125,50,0.7)",
               borderRadius: 6,
