@@ -1,0 +1,72 @@
+---
+description: DirectorKYC website conventions and hard guardrails for the unified dashboard build
+alwaysApply: true
+---
+
+# DirectorKYC — build rules
+
+The full specification is `DASHBOARD_IMPLEMENTATION_PROMPT.md` at the repo root.
+Re-read it before starting any new module. It is the source of truth.
+
+## Architecture (do not deviate)
+
+- This repo is a **fully standalone application**. It owns its own MySQL database
+  (Prisma), Stripe integration, document storage, sessions, and admin.
+- **Only this folder is deployed to Hostinger.** Never import from, reference, or
+  depend on a sibling directory (`service-dashboard`, `directorkyc-customer-dashboard`).
+  The app must run with no other folder present.
+- Do **not** modify the sibling folders. ITINFiling still uses `service-dashboard`.
+- The old proxy layer (`lib/central-dashboard/`, `lib/dashboard/`,
+  `lib/customer-dashboard-url.ts`) is being deleted — do not build on it.
+- Order amounts always come from the database, never from the client.
+- Only a signature-verified Stripe webhook may mark an order paid.
+
+## Auth rules
+
+- Unified login lives at `/login` — extend the existing `app/login/page.tsx`.
+  Do not create a second login route.
+- Redirect precedence after sign-in: staff → `/dashboard/admin` (ignore `returnTo`);
+  customer with valid `returnTo` → that target; customer without → `/dashboard`.
+- Customer session: `dkyc_session`, 30 days. Staff session: `dkyc_staff_session`, 8 hours.
+  Both HTTP-only, `sameSite: lax`, `secure` in production.
+- `components/auth/AuthProvider.tsx` is the single source of truth for client auth state.
+  Extend it; never add a competing `/api/auth/me` fetch in a component.
+- A transient backend failure (timeout, 503) must **never** sign a user out.
+  Only a genuine 401/403 clears a session. This was a real production-shaped bug — do not reintroduce it.
+- Never show a login form to an already-authenticated user.
+- `/signup` is customer-only. Staff accounts are seeded or invited.
+
+## Security
+
+- Enforce authorization server-side on every request. Client-side role checks are UX only.
+- Never trust a client-supplied role, brand, customer id, or order id.
+- Documents are served only via short-lived presigned URLs after an ownership/role check.
+- Audit-log every admin mutation.
+- Generic auth errors only — never reveal whether an email exists or which check failed.
+- Never log raw API keys, bridge tokens, passwords, or document contents.
+- Validate input with Zod at every route boundary.
+
+## Code quality
+
+- Strict TypeScript. No `any`, no unsafe casts, no `@ts-ignore`.
+- Do not silence errors, swallow exceptions, or add broad fallbacks to make something pass.
+- Match the conventions already in the file you are editing.
+- Do not refactor unrelated code or redesign screens outside the current task.
+- Every data view needs loading, empty, error, and permission states.
+
+## Design
+
+- Tailwind v4, already configured. No new UI framework or component library.
+- Reuse tokens and classes in `app/globals.css`. Fonts: Manrope (UI), Newsreader (headings).
+- Palette: `--orange #FF5A1F`, `--orange-dark #E94E1B`, `--cream #FAF6F0`,
+  `--cream-soft #FFF7F1`, `--black #111111`, `--charcoal #202024`,
+  `--body #4B4B4B`, `--muted #666666`, `--border rgba(17,17,17,0.10)`.
+- Dashboard motion stays restrained: transitions and skeletons only.
+  Do not port the homepage hero animations into data tables.
+- Responsive, no horizontal overflow, respect `prefers-reduced-motion`.
+
+## Definition of done
+
+- `npm run build` and `npm run lint` pass.
+- Verified in the browser at `http://localhost:3003` — not just compiled.
+- Report what was actually run. Never claim a check passed that was not executed.

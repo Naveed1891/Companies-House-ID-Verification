@@ -1,0 +1,9 @@
+# Deploy trigger
+#
+# This file does nothing at runtime — it is not imported, bundled, or served
+# (it lives at the repo root, not in /public). Its only purpose is to give you a
+# harmless change to commit when you want to force a production redeploy.
+#
+# To force a redeploy: change the timestamp below, then commit and push.
+#
+redeploy: 2026-10-23T00:00:00Z

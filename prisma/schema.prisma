@@ -1,0 +1,552 @@
+// Companies House Identity Verification — standalone schema.
+// Single-brand by design: no Brand/BrandDomain/StaffBrandAccess tables.
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x", "debian-openssl-1.1.x", "linux-musl-openssl-3.0.x", "linux-musl"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPER_ADMIN
+  OPERATIONS_ADMIN
+  COMPLIANCE_REVIEWER
+  FINANCE
+  SUPPORT
+  READ_ONLY
+  CUSTOMER
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  INVITED
+  SUSPENDED
+}
+
+enum OrderStatus {
+  DRAFT
+  PENDING_PAYMENT
+  PAYMENT_CONFIRMED
+  AWAITING_APPLICATION
+  APPLICATION_IN_PROGRESS
+  SUBMITTED
+  UNDER_REVIEW
+  AWAITING_CUSTOMER
+  ADDITIONAL_INFO_REQUIRED
+  PROCESSING
+  COMPLETED
+  CANCELLED
+  REFUNDED
+}
+
+enum ApplicationStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  SUBMITTED
+  APPROVED
+  REJECTED
+}
+
+enum DocumentStatus {
+  REQUESTED
+  UPLOADED
+  IN_REVIEW
+  APPROVED
+  REJECTED
+  NEEDS_REUPLOAD
+}
+
+enum PaymentStatus {
+  UNPAID
+  PENDING
+  AUTHORIZED
+  PAID
+  FAILED
+  CANCELLED
+  PARTIALLY_REFUNDED
+  REFUNDED
+}
+
+enum RefundStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum MessageChannel {
+  EMAIL
+  PORTAL
+  SMS
+  WHATSAPP
+  SYSTEM
+}
+
+enum MessageDirection {
+  INBOUND
+  OUTBOUND
+  INTERNAL
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  BLOCKED
+  DONE
+}
+
+enum CheckoutIntentStatus {
+  CREATED
+  REDIRECTED
+  PAID
+  ABANDONED
+  FAILED
+}
+
+model User {
+  id              String     @id @default(cuid())
+  email           String     @db.VarChar(191)
+  emailNormalized String     @unique @db.VarChar(191)
+  passwordHash    String?    @db.VarChar(191)
+  role            Role       @default(CUSTOMER)
+  status          UserStatus @default(ACTIVE)
+  fullName        String     @db.VarChar(191)
+  whatsapp        String?    @db.VarChar(64)
+  country         String?    @db.VarChar(80)
+  emailVerifiedAt DateTime?
+  lastLoginAt     DateTime?
+  lockedUntil     DateTime?
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  deletedAt       DateTime?
+
+  orders         Order[]              @relation("OrderCustomer")
+  assignedOrders Order[]              @relation("OrderAssignee")
+  documents      Document[]           @relation("DocumentOwner")
+  reviewedDocs   Document[]           @relation("DocumentReviewer")
+  applications   Application[]        @relation("ApplicationReviewer")
+  messages       Message[]
+  notifications  Notification[]
+  tasks          Task[]               @relation("TaskAssignee")
+  notes          InternalNote[]
+  auditLogs      AuditLog[]
+  statusChanges  OrderStatusHistory[]
+  resetTokens    PasswordResetToken[]
+  resetOtps      PasswordResetOtp[]
+  loginOtps      LoginOtp[]
+  checkoutIntents CheckoutIntent[]
+  signupFollowUps SignupFollowUp[]
+
+  @@index([role, status])
+  @@index([createdAt])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  userId    String
+  tokenHash String    @unique @db.VarChar(191)
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model PasswordResetOtp {
+  id         String    @id @default(cuid())
+  userId     String
+  codeHash   String    @db.VarChar(191)
+  expiresAt  DateTime
+  attempts   Int       @default(0)
+  consumedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model LoginOtp {
+  id         String    @id @default(cuid())
+  userId     String
+  codeHash   String    @db.VarChar(191)
+  expiresAt  DateTime
+  attempts   Int       @default(0)
+  consumedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  slug        String   @unique @db.VarChar(120)
+  name        String   @db.VarChar(191)
+  description String?  @db.Text
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  packages Package[]
+}
+
+model Package {
+  id             String   @id @default(cuid())
+  serviceId      String
+  slug           String   @unique @db.VarChar(120)
+  name           String   @db.VarChar(191)
+  description    String?  @db.Text
+  price          Decimal  @db.Decimal(10, 2)
+  compareAtPrice Decimal? @db.Decimal(10, 2)
+  currency       String   @default("GBP") @db.VarChar(3)
+  features       Json
+  active         Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  service              Service               @relation(fields: [serviceId], references: [id])
+  orders               Order[]
+  formDefinitions      FormDefinition[]
+  documentRequirements DocumentRequirement[]
+  checkoutIntents      CheckoutIntent[]
+
+  @@index([active])
+}
+
+model Order {
+  id              String        @id @default(cuid())
+  publicReference String        @unique @db.VarChar(40)
+  userId          String
+  packageId       String
+  status          OrderStatus   @default(PENDING_PAYMENT)
+  paymentStatus   PaymentStatus @default(UNPAID)
+  amount          Decimal       @db.Decimal(10, 2)
+  currency        String        @default("GBP") @db.VarChar(3)
+  assignedToId    String?
+  personalCode    String?       @db.VarChar(64)
+  sequenceNo      Int?          @unique
+  diditSessionId  String?       @db.VarChar(191)
+  diditStatus     String?       @db.VarChar(40)
+  diditUrl        String?       @db.Text
+  completedAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  user       User                 @relation("OrderCustomer", fields: [userId], references: [id])
+  assignedTo User?                @relation("OrderAssignee", fields: [assignedToId], references: [id])
+  package    Package              @relation(fields: [packageId], references: [id])
+  payments   Payment[]
+  history    OrderStatusHistory[]
+  application Application?
+  documents  Document[]
+  messages   Message[]
+  tasks      Task[]
+  notes        InternalNote[]
+  infoRequests InfoRequest[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([paymentStatus])
+  @@index([createdAt])
+}
+
+/// Atomic counters (e.g. the global order sequence). One row per counter key.
+model Counter {
+  key       String   @id @db.VarChar(64)
+  value     Int
+  updatedAt DateTime @updatedAt
+}
+
+model OrderStatusHistory {
+  id         String       @id @default(cuid())
+  orderId    String
+  fromStatus OrderStatus?
+  toStatus   OrderStatus
+  note       String?      @db.Text
+  actorId    String?
+  createdAt  DateTime     @default(now())
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  actor User? @relation(fields: [actorId], references: [id])
+
+  @@index([orderId])
+}
+
+model Payment {
+  id                String        @id @default(cuid())
+  orderId           String
+  provider          String        @default("stripe") @db.VarChar(40)
+  providerPaymentId String?       @unique @db.VarChar(191)
+  amount            Decimal       @db.Decimal(10, 2)
+  currency          String        @default("GBP") @db.VarChar(3)
+  status            PaymentStatus @default(PENDING)
+  rawPayload        Json?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  order   Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  refunds Refund[]
+
+  @@index([orderId])
+}
+
+model Refund {
+  id               String       @id @default(cuid())
+  paymentId        String
+  amount           Decimal      @db.Decimal(10, 2)
+  reason           String?      @db.Text
+  status           RefundStatus @default(PENDING)
+  providerRefundId String?      @unique @db.VarChar(191)
+  actorId          String?
+  createdAt        DateTime     @default(now())
+
+  payment Payment @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+
+  @@index([paymentId])
+}
+
+model CheckoutIntent {
+  id              String               @id @default(cuid())
+  publicReference String               @unique @db.VarChar(40)
+  userId          String
+  packageId       String
+  stripeSessionId String?              @unique @db.VarChar(191)
+  orderId         String?              @db.VarChar(191)
+  status          CheckoutIntentStatus @default(CREATED)
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  package Package @relation(fields: [packageId], references: [id])
+
+  @@index([userId])
+}
+
+model FormDefinition {
+  id        String   @id @default(cuid())
+  packageId String
+  version   Int      @default(1)
+  schema    Json
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  package Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  @@unique([packageId, version])
+}
+
+model Application {
+  id                  String            @id @default(cuid())
+  orderId             String            @unique
+  status              ApplicationStatus @default(NOT_STARTED)
+  answers             Json?
+  declarationAccepted Boolean           @default(false)
+  submittedAt         DateTime?
+  reviewNote          String?           @db.Text
+  reviewedById        String?
+  reviewedAt          DateTime?
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  order      Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  reviewedBy User? @relation("ApplicationReviewer", fields: [reviewedById], references: [id])
+
+  @@index([status])
+}
+
+model DocumentRequirement {
+  id        String  @id @default(cuid())
+  packageId String
+  kind      String  @db.VarChar(80)
+  label     String  @db.VarChar(191)
+  guidance  String? @db.Text
+  required  Boolean @default(true)
+  sortOrder Int     @default(0)
+
+  package Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  @@unique([packageId, kind])
+}
+
+model Document {
+  id              String         @id @default(cuid())
+  orderId         String
+  userId          String
+  kind            String         @db.VarChar(80)
+  fileName        String         @db.VarChar(255)
+  mimeType        String         @db.VarChar(120)
+  size            Int
+  storageKey      String         @db.VarChar(500)
+  status          DocumentStatus @default(UPLOADED)
+  rejectionReason String?        @db.Text
+  reviewedById    String?
+  reviewedAt      DateTime?
+  uploadedAt      DateTime       @default(now())
+
+  order      Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  user       User  @relation("DocumentOwner", fields: [userId], references: [id])
+  reviewedBy User? @relation("DocumentReviewer", fields: [reviewedById], references: [id])
+
+  @@index([orderId])
+  @@index([status])
+}
+
+model Message {
+  id        String           @id @default(cuid())
+  orderId   String?
+  userId    String
+  channel   MessageChannel   @default(PORTAL)
+  direction MessageDirection @default(OUTBOUND)
+  subject   String?          @db.VarChar(191)
+  body      String           @db.Text
+  authorId  String?          @db.VarChar(191)
+  readAt    DateTime?
+  createdAt DateTime         @default(now())
+
+  order Order? @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  user  User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+  @@index([userId])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String   @db.VarChar(191)
+  body      String   @db.Text
+  href      String?  @db.VarChar(255)
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, readAt])
+}
+
+model Task {
+  id           String     @id @default(cuid())
+  orderId      String?
+  title        String     @db.VarChar(191)
+  detail       String?    @db.Text
+  status       TaskStatus @default(TODO)
+  assignedToId String?
+  dueAt        DateTime?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  order      Order? @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  assignedTo User?  @relation("TaskAssignee", fields: [assignedToId], references: [id])
+
+  @@index([status])
+}
+
+model InternalNote {
+  id        String   @id @default(cuid())
+  orderId   String
+  authorId  String
+  body      String   @db.Text
+  createdAt DateTime @default(now())
+
+  order  Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  author User  @relation(fields: [authorId], references: [id])
+
+  @@index([orderId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  action    String   @db.VarChar(120)
+  entity    String   @db.VarChar(80)
+  entityId  String?  @db.VarChar(191)
+  before    Json?
+  after     Json?
+  ip        String?  @db.VarChar(64)
+  createdAt DateTime @default(now())
+
+  actor User? @relation(fields: [actorId], references: [id])
+
+  @@index([entity, entityId])
+  @@index([createdAt])
+}
+
+model ProcessedStripeEvent {
+  id          String   @id @default(cuid())
+  eventId     String   @unique @db.VarChar(191)
+  type        String   @db.VarChar(120)
+  processedAt DateTime @default(now())
+}
+
+enum InfoRequestKind {
+  DOCUMENT
+  INFORMATION
+}
+
+enum InfoRequestStatus {
+  OPEN
+  RESOLVED
+  CANCELLED
+}
+
+/// A specific thing staff need from the customer after submission, so the
+/// customer is shown the right input instead of restarting their application.
+model InfoRequest {
+  id           String            @id @default(cuid())
+  orderId      String
+  kind         InfoRequestKind
+  message      String            @db.Text
+  documentKind String?           @db.VarChar(80)
+  documentLabel String?          @db.VarChar(191)
+  status       InfoRequestStatus @default(OPEN)
+  responseText String?           @db.Text
+  documentId   String?           @db.VarChar(191)
+  createdById  String?           @db.VarChar(191)
+  resolvedAt   DateTime?
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId, status])
+}
+
+/// CEO-managed runtime configuration (SMTP, Stripe, S3). Values are encrypted
+/// at rest and override the corresponding .env variables when present.
+model AppSetting {
+  id          String   @id @default(cuid())
+  key         String   @unique @db.VarChar(120)
+  value       String   @db.Text
+  updatedById String?  @db.VarChar(191)
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+}
+
+model SignupFollowUp {
+  id        String   @id @default(cuid())
+  userId    String
+  sequence  Int
+  status    String   @default("PROCESSING") @db.VarChar(20)
+  subject   String   @db.VarChar(191)
+  claimedAt DateTime @default(now())
+  sentAt    DateTime?
+  error     String?  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, sequence])
+  @@index([status, claimedAt])
+  @@index([sentAt])
+}
