@@ -1,5 +1,3 @@
-// Populate env for Prisma CLI (migrate, seed) from the committed
-// fallback when hPanel env-var access is delegated. Existing env wins.
 import dotenv from "dotenv";
 dotenv.config();
 try {
@@ -9,8 +7,22 @@ try {
     if (!process.env[key]) process.env[key] = value;
   }
 } catch {
-  // config file is optional (e.g. local dev without it) — silent skip
+  // config file is optional
 }
+
+// Build DATABASE_URL from separate Hostinger hPanel DB vars when not already set.
+// Prisma detects this file and skips its own .env loading, so this must be done here.
+if (!process.env.DATABASE_URL) {
+  const host = process.env.DB_HOST;
+  const port = process.env.DB_PORT || "3306";
+  const user = process.env.DB_USER;
+  const pass = process.env.DB_PASSWORD;
+  const name = process.env.DB_NAME;
+  if (host && user && pass && name) {
+    process.env.DATABASE_URL = `mysql://${user}:${encodeURIComponent(pass)}@${host}:${port}/${name}`;
+  }
+}
+
 import { defineConfig } from "prisma/config";
 
 export default defineConfig({
