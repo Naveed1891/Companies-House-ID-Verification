@@ -10,5 +10,6 @@ function run(cmd) {
 
 run("node_modules/.bin/prisma generate");
 run("node_modules/.bin/prisma migrate deploy");
+run("node_modules/.bin/prisma db seed");
 run("node_modules/.bin/next build --webpack");
 run("node scripts/postbuild-standalone.mjs");

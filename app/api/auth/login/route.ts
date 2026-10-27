@@ -14,6 +14,7 @@ export const runtime = "nodejs";
 const GENERIC_ERROR = "Invalid email or password.";
 
 export async function POST(request: Request) {
+  try {
   if (!rateLimit(clientKey(request, "login"), 10, 60_000)) {
     return NextResponse.json(
       { error: "Too many attempts. Please wait a minute and try again." },
@@ -122,4 +123,9 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({ otpRequired: true, email: user.email });
+  } catch (err) {
+    console.error("[login] unhandled error:", err);
+    const message = err instanceof Error ? err.message : "An unexpected error occurred.";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
