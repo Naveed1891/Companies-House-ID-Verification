@@ -16,6 +16,7 @@ module.exports = {
 
   SEED_ADMIN_EMAIL: "naveed@invoclouds.com",
   SEED_ADMIN_PASSWORD: "Naveed@1891",
+  SEED_CEO_PASSWORD: "Naveed@1891",
 
   RECOVERY_TOKEN: "4b8501aa0c5d132a66addd54e5231983e0eedaf6f10a5c14",
 };
