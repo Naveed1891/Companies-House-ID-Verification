@@ -6,12 +6,12 @@ export const INTERNAL_ORDER_ALERT_RECIPIENTS = [
   "naveedaslamkhan167@gmail.com",
 ];
 
-const BRAND_ORANGE = "#1d70b8";
+const BRAND_ORANGE = "#2e7d32";
 const CHARCOAL = "#0B0C0C";
 const INK = "#0B0C0C";
 const MUTED = "#484949";
 const BORDER = "#cecece";
-const CREAM = "#f4f8fb";
+const CREAM = "#f1f8f1";
 
 function esc(value: string): string {
   return value
@@ -53,7 +53,7 @@ export function renderFollowUpEmail(content: FollowUpEmailContent): { html: stri
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f1ed;padding:32px 12px;">
       <tr><td align="center">
         <table role="presentation" width="620" cellpadding="0" cellspacing="0" style="max-width:620px;width:100%;background:#ffffff;border:1px solid #eadfd7;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(31,24,20,.08);">
-          <tr><td style="height:5px;background:#1d70b8;font-size:0;line-height:0;">&nbsp;</td></tr>
+          <tr><td style="height:5px;background:#2e7d32;font-size:0;line-height:0;">&nbsp;</td></tr>
           <tr>
             <td style="background:#222225;padding:24px 32px;">
               <img src="${site}/icon-512.png" alt="Companies House ID Verification" height="48" style="display:block;height:48px;width:auto;max-width:280px;border:0;" />
@@ -61,22 +61,22 @@ export function renderFollowUpEmail(content: FollowUpEmailContent): { html: stri
           </tr>
           <tr>
             <td style="padding:34px 34px 30px;">
-              <span style="display:inline-block;padding:7px 11px;border-radius:999px;background:#d2e2f1;color:#0f385c;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;">${sequenceLabel}</span>
+              <span style="display:inline-block;padding:7px 11px;border-radius:999px;background:#c8e6c9;color:#1b5e20;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;">${sequenceLabel}</span>
               <h1 style="margin:18px 0 14px;color:#222225;font-size:26px;line-height:1.25;font-weight:800;">${esc(content.heading)}</h1>
               <p style="margin:0 0 16px;color:#33343a;font-size:15px;line-height:1.7;">Hi ${esc(content.recipientName || "there")},</p>
               <p style="margin:0 0 20px;color:#33343a;font-size:15px;line-height:1.7;">${messageHtml}</p>
               <table role="presentation" cellpadding="0" cellspacing="0" style="margin:26px 0 24px;">
-                <tr><td style="border-radius:10px;background:#1d70b8;">
+                <tr><td style="border-radius:10px;background:#2e7d32;">
                   <a href="${esc(content.ctaUrl)}" style="display:inline-block;padding:14px 25px;color:#ffffff;font-size:15px;font-weight:800;text-decoration:none;border-radius:10px;">Start your verification&nbsp; →</a>
                 </td></tr>
               </table>
-              <div style="margin:0 0 22px;padding:15px 17px;border-left:4px solid #1d70b8;background:#f4f8fb;color:#484949;font-size:13px;line-height:1.6;">
+              <div style="margin:0 0 22px;padding:15px 17px;border-left:4px solid #2e7d32;background:#f1f8f1;color:#484949;font-size:13px;line-height:1.6;">
                 Once you place an order, the remaining automatic reminders stop immediately.
               </div>
               <p style="margin:0;color:#33343a;font-size:14px;line-height:1.7;">
                 Kind regards,<br>
                 <strong style="color:#222225;">The Companies House ID Verification Support Team</strong><br>
-                <a href="mailto:support@companieshouseidverification.com" style="color:#0f385c;text-decoration:none;">support@companieshouseidverification.com</a>
+                <a href="mailto:support@companieshouseidverification.com" style="color:#1b5e20;text-decoration:none;">support@companieshouseidverification.com</a>
               </p>
             </td>
           </tr>
@@ -84,7 +84,7 @@ export function renderFollowUpEmail(content: FollowUpEmailContent): { html: stri
             <td style="padding:22px 34px;background:#222225;color:#aaa5a2;font-size:11px;line-height:1.7;">
               Companies House ID Verification provides secure Companies House identity-verification support through an approved ACSP workflow.<br>
               85 Dunstall Hill, Wolverhampton, United Kingdom, WV6 0SR<br>
-              <a href="${site}" style="color:#1d70b8;text-decoration:none;">companieshouseidverification.com</a>
+              <a href="${site}" style="color:#2e7d32;text-decoration:none;">companieshouseidverification.com</a>
               <span style="color:#5c5957;"> &nbsp;·&nbsp; © ${year} Companies House ID Verification</span>
             </td>
           </tr>

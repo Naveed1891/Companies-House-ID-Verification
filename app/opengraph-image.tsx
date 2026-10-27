@@ -13,7 +13,7 @@ export default function Image() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "#1d70b8",
+          background: "#2e7d32",
           padding: "72px 80px",
           fontFamily: "system-ui, -apple-system, sans-serif",
         }}
@@ -91,7 +91,7 @@ export default function Image() {
           <div
             style={{
               background: "#ffffff",
-              color: "#1d70b8",
+              color: "#2e7d32",
               borderRadius: 8,
               padding: "12px 28px",
               fontSize: 18,

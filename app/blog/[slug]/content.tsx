@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 
 function CtaBlock() {
   return (
-    <aside className="my-10 bg-[#1d70b8] p-[clamp(26px,4vw,36px)] text-white">
+    <aside className="my-10 bg-[#2e7d32] p-[clamp(26px,4vw,36px)] text-white">
       <h2 className="mt-0 text-white">Complete your verification with confidence</h2>
       <p className="mb-5 text-white/90">Guided support for UK and international applicants — fixed £19 fee, ACSP approved.</p>
-      <Link href="/checkout" className="inline-flex items-center bg-white px-6 py-3 text-[15px] font-bold text-[#1d70b8] no-underline hover:bg-[#f4f8fb]">Start Verification →</Link>
+      <Link href="/checkout" className="inline-flex items-center bg-white px-6 py-3 text-[15px] font-bold text-[#2e7d32] no-underline hover:bg-[#f1f8f1]">Start Verification →</Link>
     </aside>
   );
 }

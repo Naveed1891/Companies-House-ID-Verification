@@ -19,9 +19,9 @@ export function OrganizationJsonLd() {
         url: "https://companieshouseidverification.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://companieshouseidverification.com/icon-512.png",
-          width: 512,
-          height: 512,
+          url: "https://companieshouseidverification.com/ch-logo.webp",
+          width: 220,
+          height: 66,
         },
         image: "https://companieshouseidverification.com/opengraph-image",
         description:
@@ -194,7 +194,9 @@ export function ArticleJsonLd({
           url: "https://companieshouseidverification.com",
           logo: {
             "@type": "ImageObject",
-            url: "https://companieshouseidverification.com/icon-512.png",
+            url: "https://companieshouseidverification.com/ch-logo.webp",
+            width: 220,
+            height: 66,
           },
         },
       }}

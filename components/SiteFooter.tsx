@@ -34,7 +34,7 @@ const columns = [
 
 export function SiteFooter() {
   return (
-    <footer style={{ background: "#0f385c", color: "#ffffff" }}>
+    <footer style={{ background: "#1b5e20", color: "#ffffff" }}>
       <div className="site-container pt-[clamp(48px,7vw,72px)]">
         <div className="grid grid-cols-1 gap-[clamp(32px,5vw,48px)] sm:grid-cols-2 xl:grid-cols-4">
           <div>
@@ -45,7 +45,7 @@ export function SiteFooter() {
             <a
               href="mailto:support@companieshouseidverification.com"
               className="mt-3 inline-block text-[13.5px] font-semibold no-underline hover:underline"
-              style={{ color: "#d2e2f1" }}
+              style={{ color: "#c8e6c9" }}
             >
               support@companieshouseidverification.com
             </a>
