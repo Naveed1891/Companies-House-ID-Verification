@@ -6107,4 +6107,247 @@ export const ARTICLE_CONTENT: Record<string, ReactNode> = {
       <CtaBlock />
     </>
   ),
+
+  "complete-2026-guide-companies-house-identity-verification": (
+    <>
+      <p>
+        <strong>Companies House identity verification</strong> is now a legal requirement for millions of people connected to UK companies. Whether you are a first-time director, a long-serving PSC, an LLP member or someone who files documents on a company&rsquo;s behalf, you must prove your identity to Companies House before or by November 2026. This complete guide covers every aspect of the <strong>id verification companies house</strong> process &mdash; the rules, the routes, the documents, the personal code, company filing obligations, and what happens if you do not comply.
+      </p>
+
+      <h2>What is Companies House identity verification?</h2>
+      <p>
+        <strong>Companies House identity verification</strong> is a requirement introduced by the Economic Crime and Corporate Transparency Act 2023 (ECCTA). Under this legislation, every individual connected to a UK company must demonstrate to Companies House that they are who they claim to be. This is part of a broader anti-money laundering and <strong>know your customer (KYC)</strong> framework designed to stop false identities from appearing on the UK company register.
+      </p>
+      <p>
+        Before ECCTA, there were no checks on whether the people named as directors or PSCs on the register were real. Fraudsters could register companies in other people&rsquo;s names without their knowledge. The <strong>ECCTA identity verification</strong> regime closes that gap. You can read the official guidance on{" "}
+        <a href="https://www.gov.uk/guidance/companies-house-identity-verification" target="_blank" rel="noopener noreferrer">GOV.UK companies house identity verification</a>.
+      </p>
+
+      <h2>Who needs to complete the id check?</h2>
+      <p>
+        The <strong>companies house id check</strong> requirement applies to four groups:
+      </p>
+      <ul>
+        <li><strong>Company directors</strong> &mdash; all directors of UK limited companies, whether UK-based or overseas. <strong>Director identity verification companies house</strong> rules apply to both new and existing directors.</li>
+        <li><strong>Persons with significant control (PSCs)</strong> &mdash; anyone who owns more than 25% of shares or voting rights in a UK company.</li>
+        <li><strong>LLP members</strong> &mdash; designated and non-designated members of limited liability partnerships.</li>
+        <li><strong>Authorised filers</strong> &mdash; individuals who submit documents to Companies House on behalf of a company.</li>
+      </ul>
+      <p>
+        The government estimates six to seven million people fall within this requirement. See the official guidance on{" "}
+        <a href="https://www.gov.uk/guidance/when-you-need-to-verify-your-identity-for-companies-house" target="_blank" rel="noopener noreferrer">when you need to verify your identity</a> for your specific situation.
+      </p>
+
+      <h2>The two routes: GOV.UK One Login vs ACSP</h2>
+      <p>
+        There are two ways to complete your <strong>company identity verification UK</strong>:
+      </p>
+      <h3>1. GOV.UK One Login (free, self-service)</h3>
+      <p>
+        The <strong>GOV.UK One Login identity verification</strong> route lets you verify directly through the government&rsquo;s own identity service. You create or log in to a GOV.UK One Login account, then complete the <strong>official companies house identity check</strong> using a UK passport or UK driving licence. A smartphone is required for the biometric liveness check. This route is free and entirely self-service, but it only accepts UK-issued documents.
+      </p>
+      <h3>2. Authorised Corporate Service Provider (ACSP)</h3>
+      <p>
+        The <strong>ACSP identity verification</strong> route uses a <strong>companies house authorised agent</strong> &mdash; a third-party provider approved by Companies House to carry out identity checks on its behalf. This route accepts a much wider range of documents, including international passports, national identity cards and overseas driving licences. It is the recommended route for directors outside the UK and anyone who does not hold a valid UK document. Our service is <strong>ACSP approved</strong> and handles the full <strong>director id verification UK</strong> process at a fixed fee of £19.
+      </p>
+
+      <h2>What is a Companies House personal code?</h2>
+      <p>
+        Once your identity is verified, Companies House issues you an 11-character alphanumeric code known as your <strong>companies house personal code</strong> (format: XXXX-XXXX-XXXX). This <strong>personal verification code companies house</strong> belongs to you as an individual, not to any particular company. You use it to link yourself to every directorship, PSC position, LLP membership or filing role you hold.
+      </p>
+      <p>
+        Your personal code does not expire and is reusable across multiple companies. You will need it whenever you appoint yourself as a director, register a new company, or update your details on the Companies House register. Read more about the <Link href="/blog/what-is-a-companies-house-personal-code">companies house personal code</Link>.
+      </p>
+
+      <h2>Company filing and confirmation statement obligations</h2>
+      <p>
+        <strong>Company filing identity verification</strong> requirements mean that from November 2026, unverified individuals cannot file documents with Companies House. The <strong>confirmation statement identity verification</strong> process is one of the first places this becomes visible: when you complete your annual confirmation statement, Companies House will check that each named director and PSC has verified their identity. If they have not, the statement cannot be accepted.
+      </p>
+      <p>
+        Newly appointed directors must verify before their appointment can be registered. This means no new directorship can proceed without the individual first completing <strong>director verification companies house</strong>.
+      </p>
+
+      <h2>Accepted documents for identity verification</h2>
+      <p>
+        The <strong>documents required for companies house verification</strong> depend on which route you use:
+      </p>
+      <ul>
+        <li><strong>GOV.UK One Login:</strong> UK passport or UK driving licence only</li>
+        <li><strong>ACSP route:</strong> UK and international passports, national identity cards (EEA and non-EEA), biometric residence permits, UK driving licences, and in some cases supplementary address documents</li>
+      </ul>
+      <p>
+        <strong>Passport verification companies house</strong> via an ACSP is the most reliable route for directors holding non-UK travel documents. Check our <Link href="/requirements">full requirements page</Link> for a complete list.
+      </p>
+
+      <h2>KYC and anti-money laundering context</h2>
+      <p>
+        Companies House identity verification sits within the UK&rsquo;s wider <strong>anti-money laundering identity verification</strong> framework. The requirement for <strong>KYC companies house</strong> checks mirrors the know-your-customer obligations already placed on banks, solicitors and accountants. By extending similar obligations to the company register itself, the UK government aims to make corporate structures less attractive for money laundering and economic crime.
+      </p>
+      <p>
+        ACSPs that carry out <strong>companies house director check</strong> processes are themselves regulated and supervised under the Money Laundering Regulations. This means identity checks performed by an ACSP carry regulatory weight and are conducted to a consistent, government-approved standard.
+      </p>
+
+      <h2>What are the consequences of not verifying?</h2>
+      <p>
+        Not completing your <strong>verify identity companies house</strong> obligation before the November 2026 deadline has serious consequences. Under ECCTA:
+      </p>
+      <ul>
+        <li>Companies House will annotate the public register to indicate that an individual has not verified their identity</li>
+        <li>Unverified directors cannot be appointed or file documents</li>
+        <li>Continuing to act as a director without having verified is a <strong>criminal offence</strong> carrying a fine or custodial sentence</li>
+        <li>Companies whose directors remain unverified may face restrictions on their filings</li>
+      </ul>
+      <p>
+        Read the full guidance on <Link href="/blog/what-happens-if-you-dont-complete-companies-house-verification">what happens if you don&rsquo;t verify</Link>.
+      </p>
+
+      <h2>Troubleshooting: common verification problems</h2>
+      <p>
+        <strong>Companies house verification problems</strong> are most common when documents are expired, names do not match the register, or applicants try to use the GOV.UK route with a non-UK document. If you have experienced <strong>failed identity verification companies house</strong> via GOV.UK One Login, switching to an ACSP is usually the solution. An <strong>ACSP verification service</strong> like ours supports a broader range of documents and provides human review at each stage.
+      </p>
+      <p>
+        Common reasons for failure include: using an expired passport, a name discrepancy between your document and your Companies House record, poor image quality on uploaded documents, or attempting to use a foreign national ID card through the GOV.UK route. See our <Link href="/faq">FAQ</Link> for step-by-step troubleshooting.
+      </p>
+
+      <h2>The November 2026 deadline</h2>
+      <p>
+        The <strong>companies house verification guide 2026</strong> timeline is:
+      </p>
+      <ul>
+        <li><strong>18 November 2025:</strong> New directors must verify before appointment can be registered</li>
+        <li><strong>November 2026:</strong> All existing directors and PSCs must have verified</li>
+        <li><strong>Post-deadline:</strong> Criminal liability and filing restrictions for unverified individuals</li>
+      </ul>
+      <p>
+        Do not leave this to the last minute. Processing times increase significantly as deadlines approach. <Link href="/blog/companies-house-identity-verification-deadline">Read the full deadline guidance</Link>.
+      </p>
+
+      <h2>How to complete your verification today</h2>
+      <p>
+        Companies House ID Verification provides ACSP-approved <strong>company director identity verification</strong> for UK and international applicants. The online process takes around 15 minutes, costs a fixed £19, and covers a full <strong>companies house id check</strong> including document verification, liveness check and role confirmation. Most applicants receive their personal code guidance the same working day.
+      </p>
+      <p>
+        <Link href="/start">Start your verification</Link> now or visit our <Link href="/how-it-works">how it works</Link> page for a step-by-step walkthrough.
+      </p>
+      <CtaBlock />
+    </>
+  ),
+
+  "companies-house-identity-verification-overseas-directors-pakistan": (
+    <>
+      <p>
+        If you are an <strong>overseas director</strong>, a non-UK resident PSC, or an applicant based in Pakistan with a UK company connection, you are still legally required to complete <strong>companies house identity verification</strong>. The requirement applies regardless of where you live in the world. This guide explains exactly what <strong>non-UK director identity verification</strong> involves, how the ACSP route works for international applicants, what documents are accepted &mdash; including Pakistani passports &mdash; and how to get your personal code from abroad.
+      </p>
+
+      <h2>Do overseas directors need to verify their identity?</h2>
+      <p>
+        Yes. <strong>Overseas director identity verification</strong> is mandatory under the Economic Crime and Corporate Transparency Act 2023 (ECCTA). If you are a director, PSC, LLP member or authorised filer connected to a UK company, your location does not exempt you. <strong>International director companies house</strong> obligations are identical to those for UK-based individuals. Failing to verify by November 2026 carries the same criminal liability and filing restrictions regardless of where you reside.
+      </p>
+      <p>
+        Companies House estimates that a significant proportion of the six to seven million people who must verify live outside the United Kingdom. You can read the official guidance on{" "}
+        <a href="https://www.gov.uk/guidance/companies-house-identity-verification-for-overseas-individuals" target="_blank" rel="noopener noreferrer">companies house identity verification for overseas individuals</a>.
+      </p>
+
+      <h2>Why GOV.UK One Login does not work for most overseas applicants</h2>
+      <p>
+        The GOV.UK One Login route is the free, self-service option for <strong>companies house verification gov.uk</strong>. However, it currently only accepts a UK passport or a UK driving licence. This makes it unsuitable for the majority of <strong>non-UK director identity verification</strong> cases, where the individual holds a foreign passport or a national identity card issued outside the UK.
+      </p>
+      <p>
+        If you are a <strong>foreign director companies house</strong> applicant without a current UK passport or UK driving licence, you must use an Authorised Corporate Service Provider (ACSP) to <strong>verify identity from abroad companies house</strong>.
+      </p>
+
+      <h2>How the ACSP route works for overseas applicants</h2>
+      <p>
+        An <strong>ACSP overseas verification</strong> service is a companies house authorised agent approved by Companies House to conduct identity checks on behalf of overseas and UK-based applicants alike. The entire process can be completed remotely &mdash; no UK visit, no UK address and no UK bank account is required. The steps are:
+      </p>
+      <ol>
+        <li>Submit your application online with your identity document, company role details and contact information</li>
+        <li>Complete a biometric liveness check using your smartphone camera (typically takes 2&ndash;3 minutes)</li>
+        <li>The ACSP conducts an <strong>international document verification companies house</strong> check, verifying your document against international databases</li>
+        <li>Once approved, your personal code is confirmed and you receive guidance on linking it to your Companies House role</li>
+      </ol>
+      <p>
+        Our service supports this complete process for <strong>overseas companies house director check</strong> at a fixed £19 fee.
+      </p>
+
+      <h2>Pakistan and Companies House: what you need to know</h2>
+      <p>
+        <strong>Companies house id verification pakistan</strong> applicants are among the most frequently asked-about international cases. Pakistan is home to a significant number of individuals who hold directorships or PSC positions in UK companies, particularly in sectors such as textiles, retail, property and professional services.
+      </p>
+      <p>
+        For <strong>pakistan director uk company</strong> verification:
+      </p>
+      <ul>
+        <li>A valid <strong>Pakistani passport</strong> is accepted through the ACSP route for <strong>pakistan passport companies house verification</strong></li>
+        <li>A Pakistani National Identity Card (CNIC / NICOP) may be accepted as a supporting document but is not sufficient as the primary identity document on its own &mdash; a passport is required</li>
+        <li>The name on your passport must match the name on your Companies House record; if there is a discrepancy, contact Companies House to correct it before beginning verification</li>
+        <li>There is no requirement to have a UK address, UK phone number or UK bank account</li>
+      </ul>
+      <p>
+        The GOV.UK One Login route is not available for <strong>companies house verification from pakistan</strong> &mdash; you must use an ACSP. Our service has helped applicants from Pakistan complete their verification entirely online, with guided support in English throughout.
+      </p>
+
+      <h2>Other overseas countries and accepted documents</h2>
+      <p>
+        <strong>Overseas psc verification companies house</strong> and director verification accepts passports issued by most countries worldwide through the ACSP route. Commonly verified international documents include:
+      </p>
+      <ul>
+        <li>Passports from any country (including Pakistan, India, UAE, USA, Nigeria, South Africa, China and EU member states)</li>
+        <li>National identity cards from EEA countries</li>
+        <li>Biometric Residence Permits (for individuals living in the UK on a visa)</li>
+      </ul>
+      <p>
+        Documents must be current (not expired) and the name must exactly match your Companies House records. For <strong>companies house verification for non-uk residents</strong>, the passport is almost always the most reliable primary document. See our <Link href="/requirements">full requirements page</Link>.
+      </p>
+
+      <h2>Getting your personal code as an overseas director</h2>
+      <p>
+        After successful <strong>overseas director identity verification</strong>, Companies House issues your <strong>companies house personal code</strong> &mdash; an 11-character alphanumeric code that belongs to you as an individual. This code is the same format for UK and overseas applicants alike. You will need it to:
+      </p>
+      <ul>
+        <li>Link yourself to your directorship on the Companies House register</li>
+        <li>Complete your company&rsquo;s confirmation statement</li>
+        <li>Register any new directorships or PSC roles in future</li>
+      </ul>
+      <p>
+        Your personal code does not expire. One code applies to all UK company roles you hold, regardless of how many companies you are a director of.
+      </p>
+
+      <h2>Company filing obligations for overseas directors</h2>
+      <p>
+        From November 2026, <strong>verify director identity UK</strong> requirements mean overseas directors who have not verified cannot be named or accepted in company filings. If you are a <strong>pakistan director uk company</strong> or an international director in any other country, failing to complete your verification will:
+      </p>
+      <ul>
+        <li>Block your company from filing its annual confirmation statement until you are verified</li>
+        <li>Add a public note to the Companies House register against your name</li>
+        <li>Expose you to the same criminal liability as a UK-based unverified director</li>
+      </ul>
+      <p>
+        For multi-jurisdiction directors holding roles in multiple UK companies, a single verification produces one personal code that covers all roles &mdash; you do not need to verify separately for each company.
+      </p>
+
+      <h2>Common problems for overseas and Pakistani applicants</h2>
+      <p>
+        The most frequent issues we see with <strong>companies house id verification overseas directors</strong> are:
+      </p>
+      <ul>
+        <li><strong>Name mismatch:</strong> the name on your passport differs from your Companies House record (maiden name vs married name, or transliteration differences in Arabic or Urdu names &mdash; for example, &ldquo;Muhammad&rdquo; vs &ldquo;Mohammed&rdquo; vs &ldquo;Mohammad&rdquo;)</li>
+        <li><strong>Expired passport:</strong> your document must be valid at the time of verification</li>
+        <li><strong>Poor liveness check environment:</strong> complete the biometric check in good lighting with a plain background</li>
+        <li><strong>Attempting the GOV.UK route with a foreign passport:</strong> switch to an ACSP service instead</li>
+      </ul>
+      <p>
+        If you have previously experienced <strong>companies house verification problems</strong>, our guided service provides human review at each stage to identify and resolve these issues before they cause a rejection.
+      </p>
+
+      <h2>Start your overseas verification today</h2>
+      <p>
+        Companies House ID Verification is an <strong>ACSP approved</strong> service designed to support <strong>overseas companies house director check</strong> and PSC verification for applicants worldwide. The process is fully online, available in English, and costs a fixed £19. Most international applicants complete verification within one business day.
+      </p>
+      <p>
+        <Link href="/start">Start your verification</Link> now, or read our <Link href="/faq">FAQ</Link> for answers to common overseas applicant questions.
+      </p>
+      <CtaBlock />
+    </>
+  ),
 };

@@ -1511,6 +1511,34 @@ export const articles: Article[] = [
     slug: "companies-house-id-verification-accepted-documents",
     published: true,
   },
+  {
+    category: "General",
+    title: "The Complete 2026 Guide to Companies House Identity Verification",
+    description:
+      "Everything you need to know about Companies House identity verification in one comprehensive guide: ECCTA requirements, GOV.UK One Login vs ACSP, personal codes, company filing obligations, accepted documents, KYC context and consequences of non-compliance.",
+    keywords:
+      "companies house identity verification, companies house id verification, id verification companies house, company identity verification uk, director identity verification companies house, companies house director id verification, gov.uk companies house identity verification, companies house personal code, acsp identity verification, eccta identity verification, economic crime corporate transparency act, companies house verification guide 2026, company filing identity verification, confirmation statement identity verification, kyc companies house, companies house verification problems, failed identity verification companies house, anti-money laundering identity verification, companies house authorised agent, companies house id check",
+    date: "October 2026",
+    time: "14 min read",
+    image: "/images/compliance-advisor-reviewing-documents.jpg",
+    alt: "Compliance advisor with identity documents for Companies House verification",
+    slug: "complete-2026-guide-companies-house-identity-verification",
+    published: true,
+  },
+  {
+    category: "Overseas",
+    title: "Companies House Identity Verification for Overseas Directors and Pakistani Applicants",
+    description:
+      "Complete guide to Companies House identity verification for non-UK residents, overseas directors and Pakistani applicants. Understand the ACSP route, accepted foreign documents including Pakistani passports, and how to get your personal code from abroad.",
+    keywords:
+      "companies house identity verification overseas directors, overseas director identity verification, pakistan passport companies house verification, non-uk director identity verification, international director companies house, verify identity from abroad companies house, pakistan director uk company, overseas psc verification companies house, companies house verification from pakistan, companies house verification for non-uk residents, foreign director companies house, acsp overseas verification, international document verification companies house, companies house id verification pakistan, overseas companies house director check, verify director identity uk overseas",
+    date: "October 2026",
+    time: "13 min read",
+    image: "/images/international-professional-remote-work.jpg",
+    alt: "Overseas director completing Companies House identity verification remotely",
+    slug: "companies-house-identity-verification-overseas-directors-pakistan",
+    published: true,
+  },
 ];
 
 export const publishedArticles = articles.filter((a) => a.published);
