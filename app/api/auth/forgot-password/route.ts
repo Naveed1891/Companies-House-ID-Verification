@@ -82,7 +82,7 @@ export async function POST(request: Request) {
     subject: "Your Companies House ID Verification password reset code",
     text: resetEmail.text,
     html: resetEmail.html,
-  });
+  }, "support");
 
   if (!delivered) {
     console.warn(

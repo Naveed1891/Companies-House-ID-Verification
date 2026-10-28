@@ -309,6 +309,7 @@ export async function settingsStatus() {
       userSet: has(SETTING_KEYS.supportSmtpUser) || Boolean(process.env.SUPPORT_SMTP_USER),
       passSet: has(SETTING_KEYS.supportSmtpPass) || Boolean(process.env.SUPPORT_SMTP_PASS),
       from: val(SETTING_KEYS.supportEmailFrom) || process.env.SUPPORT_EMAIL_FROM || "support@companieshouseidverification.com",
+      supportInbox: val(SETTING_KEYS.supportEmail) || process.env.SUPPORT_EMAIL || "",
     },
     didit: {
       mode: (map.get(SETTING_KEYS.diditMode) || process.env.DIDIT_MODE || "sandbox").toLowerCase(),

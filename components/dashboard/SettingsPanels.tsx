@@ -14,15 +14,6 @@ type Status = {
     secretAccessKeySet: boolean;
     forcePathStyle: boolean;
   };
-  smtp: {
-    host: string;
-    port: string;
-    secure: boolean;
-    userSet: boolean;
-    passSet: boolean;
-    from: string;
-    supportInbox: string;
-  };
   supportSmtp: {
     host: string;
     port: string;
@@ -30,6 +21,7 @@ type Status = {
     userSet: boolean;
     passSet: boolean;
     from: string;
+    supportInbox: string;
   };
   didit: {
     mode: string;
@@ -89,14 +81,6 @@ export function SettingsPanels({ initial }: { initial: Status }) {
   const [error, setError] = useState("");
 
   // Local editable copies. Secrets start blank; sending "" leaves them unchanged.
-  const [smtp, setSmtp] = useState({
-    smtpHost: initial.smtp.host,
-    smtpPort: initial.smtp.port,
-    smtpSecure: String(initial.smtp.secure),
-    smtpUser: "",
-    smtpPass: "",
-    emailFrom: initial.smtp.from,
-  });
   const [supportSmtp, setSupportSmtp] = useState({
     supportSmtpHost: initial.supportSmtp.host,
     supportSmtpPort: initial.supportSmtp.port,
@@ -104,7 +88,7 @@ export function SettingsPanels({ initial }: { initial: Status }) {
     supportSmtpUser: "",
     supportSmtpPass: "",
     supportEmailFrom: initial.supportSmtp.from,
-    supportEmail: initial.smtp.supportInbox,
+    supportEmail: initial.supportSmtp.supportInbox,
   });
   const [stripe, setStripe] = useState({
     stripeSecretKey: "",
@@ -316,40 +300,7 @@ export function SettingsPanels({ initial }: { initial: Status }) {
       {tab === "email" && (
         <section className="dash-panel">
           <p className="eyebrow">Email (SMTP)</p>
-          <p className="settings__lead">Configure each mailbox with its own Hostinger SMTP login.</p>
-          <p className="mb-3 font-bold">Authentication mail - no-reply@companieshouseidverification.com</p>
-          <div className="settings__grid">
-            <label className="dash-label">
-              SMTP host
-              <input className="dash-input" value={smtp.smtpHost} onChange={(e) => setSmtp({ ...smtp, smtpHost: e.target.value })} placeholder="smtp.yourprovider.com" />
-            </label>
-            <label className="dash-label">
-              Port
-              <input className="dash-input" value={smtp.smtpPort} onChange={(e) => setSmtp({ ...smtp, smtpPort: e.target.value })} placeholder="587" />
-            </label>
-            <SecretField label="Username" isSet={status.smtp.userSet} value={smtp.smtpUser} onChange={(v) => setSmtp({ ...smtp, smtpUser: v })} />
-            <SecretField label="Password" isSet={status.smtp.passSet} value={smtp.smtpPass} onChange={(v) => setSmtp({ ...smtp, smtpPass: v })} />
-            <label className="dash-label">
-              From address (OTP and password reset)
-              <input className="dash-input" value={smtp.emailFrom} onChange={(e) => setSmtp({ ...smtp, emailFrom: e.target.value })} placeholder="no-reply@companieshouseidverification.com" />
-            </label>
-            <label className="dash-label">
-              Use TLS (SSL)
-              <select className="dash-input" value={smtp.smtpSecure} onChange={(e) => setSmtp({ ...smtp, smtpSecure: e.target.value })}>
-                <option value="false">STARTTLS (port 587)</option>
-                <option value="true">SSL/TLS (port 465)</option>
-              </select>
-            </label>
-          </div>
-          <div className="dash-actions mt-4">
-            <button type="button" className="dash-btn dash-btn--primary" disabled={saving} onClick={() => save(smtp)}>
-              {saving ? "Saving…" : "Save no-reply settings"}
-            </button>
-            <button type="button" className="dash-btn" onClick={() => testEmail("auth")}>
-              Test no-reply
-            </button>
-          </div>
-          <p className="mb-3 mt-8 font-bold">Customer communications - support@companieshouseidverification.com</p>
+          <p className="settings__lead">Configure the support mailbox used for customer communications, contact enquiries and password reset emails.</p>
           <div className="settings__grid">
             <label className="dash-label">SMTP host<input className="dash-input" value={supportSmtp.supportSmtpHost} onChange={(e) => setSupportSmtp({ ...supportSmtp, supportSmtpHost: e.target.value })} placeholder="smtp.hostinger.com" /></label>
             <label className="dash-label">Port<input className="dash-input" value={supportSmtp.supportSmtpPort} onChange={(e) => setSupportSmtp({ ...supportSmtp, supportSmtpPort: e.target.value })} placeholder="465" /></label>

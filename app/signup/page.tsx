@@ -16,6 +16,7 @@ import {
 import { safeReturnTo } from "@/lib/return-to";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { readApplicationDraft, type ApplicationDraft } from "@/lib/application-draft";
+import type { PublicUser } from "@/lib/auth/session";
 
 const DUPLICATE_EMAIL_MESSAGE = "Email already exists. Please sign in instead.";
 
@@ -69,7 +70,7 @@ function SignupForm() {
   const searchParams = useSearchParams();
   const returnTo = safeReturnTo(searchParams.get("returnTo") ?? searchParams.get("next"));
   const applicationSignup = searchParams.get("applicationDraft") === "1";
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, setUser } = useAuth();
   const [applicationDraft, setApplicationDraft] = useState<ApplicationDraft | null>(null);
   const [draftLoaded, setDraftLoaded] = useState(!applicationSignup);
 
@@ -122,8 +123,7 @@ function SignupForm() {
     setSubmitting(true);
     const form = new FormData(event.currentTarget);
     try {
-      console.info("[companieshouseidverification-signup] request started");
-      const result = await apiFetch<{ email: string; verificationRequired: true }>("/api/auth/signup", {
+      const result = await apiFetch<{ ok: true; user: PublicUser }>("/api/auth/signup", {
         method: "POST",
         body: JSON.stringify({
           fullName: form.get("fullName") || (applicationSignup ? applicationDraft?.fullName : ""),
@@ -135,8 +135,9 @@ function SignupForm() {
           applicationSignup,
         }),
       });
-      console.info("[companieshouseidverification-signup] verification code sent");
-      router.replace(`/verify-signup?email=${encodeURIComponent(result.email)}&returnTo=${encodeURIComponent(returnTo)}`);
+      setUser(result.user);
+      router.replace(returnTo === "/" ? "/dashboard" : returnTo);
+      router.refresh();
     } catch (cause) {
       if (cause instanceof ApiClientError) {
         const message =

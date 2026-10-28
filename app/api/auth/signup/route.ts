@@ -3,9 +3,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { validateSignupInput } from "@/lib/auth/validation";
 import { clientKey, rateLimit } from "@/lib/server/rate-limit";
-import { generateOtpCode, hashOtpCode, OTP_TTL_MS } from "@/lib/auth/password-reset";
-import { renderEmail } from "@/lib/server/email-templates";
-import { sendMail } from "@/lib/server/mailer";
+import { createSession } from "@/lib/auth/session";
 
 export const dynamic = "force-dynamic";
 
@@ -51,9 +49,9 @@ export async function POST(request: Request) {
 
     const existing = await prisma.user.findUnique({
       where: { emailNormalized: email },
-      select: { id: true, status: true, emailVerifiedAt: true },
+      select: { id: true, status: true },
     });
-    if (existing && (existing.status !== "INVITED" || existing.emailVerifiedAt)) {
+    if (existing && existing.status === "ACTIVE") {
       return NextResponse.json(
         { ok: false, error: { code: "EMAIL_ALREADY_EXISTS", message: DUPLICATE_EMAIL_MESSAGE } },
         { status: 409 },
@@ -61,44 +59,48 @@ export async function POST(request: Request) {
     }
 
     const passwordHash = await hash(input.password, 12);
-    const code = generateOtpCode();
-    const expiresAt = new Date(Date.now() + OTP_TTL_MS);
+    const now = new Date();
 
     // Public signup may only ever create a customer. Role is hard-coded, never
     // taken from the request body.
-    const user = await prisma.$transaction(async (tx) => {
-      const saved = existing
-        ? await tx.user.update({
-            where: { id: existing.id },
-            data: { passwordHash, fullName: input.fullName.trim(), whatsapp: input.whatsapp.trim().replace(/\s+/g, ""), country: input.country.trim(), status: "INVITED" },
-          })
-        : await tx.user.create({
-            data: { email, emailNormalized: email, passwordHash, role: "CUSTOMER", status: "INVITED", fullName: input.fullName.trim(), whatsapp: input.whatsapp.trim().replace(/\s+/g, ""), country: input.country.trim() },
-          });
-      await tx.passwordResetOtp.updateMany({ where: { userId: saved.id, consumedAt: null }, data: { consumedAt: new Date() } });
-      await tx.passwordResetOtp.create({ data: { userId: saved.id, codeHash: hashOtpCode(code), expiresAt } });
-      return saved;
-    });
+    const user = existing
+      ? await prisma.user.update({
+          where: { id: existing.id },
+          data: {
+            passwordHash,
+            fullName: input.fullName.trim(),
+            whatsapp: input.whatsapp.trim().replace(/\s+/g, ""),
+            country: input.country.trim(),
+            status: "ACTIVE",
+            emailVerifiedAt: now,
+          },
+        })
+      : await prisma.user.create({
+          data: {
+            email,
+            emailNormalized: email,
+            passwordHash,
+            role: "CUSTOMER",
+            status: "ACTIVE",
+            emailVerifiedAt: now,
+            fullName: input.fullName.trim(),
+            whatsapp: input.whatsapp.trim().replace(/\s+/g, ""),
+            country: input.country.trim(),
+          },
+        });
 
-    const verifyEmail = renderEmail({
-      preview: "Verify your Companies House ID Verification email address",
-      heading: "Verify your email address",
-      intro: `Hi ${user.fullName}, welcome to Companies House ID Verification. Use this code to confirm your email address.`,
-      code,
-      note: "This code expires in 10 minutes.",
-    });
-    const delivered = await sendMail({
-      to: user.email,
-      subject: "Verify your Companies House ID Verification email address",
-      text: verifyEmail.text,
-      html: verifyEmail.html,
-    });
-    if (!delivered) return NextResponse.json({ ok: false, error: { code: "EMAIL_SEND_FAILED", message: "We could not send the verification code. Please try again." } }, { status: 500 });
+    await createSession("customer", user.id, user.role);
 
     return NextResponse.json({
       ok: true,
-      email: user.email,
-      verificationRequired: true,
+      user: {
+        id: user.id,
+        fullName: user.fullName,
+        email: user.email,
+        whatsapp: user.whatsapp ?? "",
+        country: user.country ?? "",
+        role: user.role,
+      },
     });
   } catch (err) {
     console.error("[signup] unhandled error:", err);
