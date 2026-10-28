@@ -74,7 +74,13 @@ const CACHE_MS = 30_000;
 
 async function loadAll(): Promise<Map<string, string>> {
   if (cache && Date.now() - cacheAt < CACHE_MS) return cache;
-  const rows = await prisma.appSetting.findMany({ select: { key: true, value: true } });
+  let rows: { key: string; value: string }[] = [];
+  try {
+    rows = await prisma.appSetting.findMany({ select: { key: true, value: true } });
+  } catch (err) {
+    console.error("[settings] failed to load AppSetting rows:", err instanceof Error ? err.message : err);
+    return new Map(); // return empty map so callers fall back to env vars
+  }
   const map = new Map<string, string>();
   for (const row of rows) {
     try {

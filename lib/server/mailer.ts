@@ -16,7 +16,14 @@ export async function sendMailWithResult(
   mail: Mail,
   profile: MailProfile = "auth",
 ): Promise<MailResult> {
-  const smtp = await resolveSmtp(profile);
+  let smtp: Awaited<ReturnType<typeof resolveSmtp>>;
+  try {
+    smtp = await resolveSmtp(profile);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "SMTP settings could not be loaded.";
+    console.error("[mailer] resolveSmtp failed:", msg);
+    return { ok: false, error: msg };
+  }
   if (!smtp.configured) return { ok: false, error: `${profile} SMTP is not fully configured.` };
 
   try {
