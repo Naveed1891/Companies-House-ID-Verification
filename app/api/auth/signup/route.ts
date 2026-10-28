@@ -102,7 +102,8 @@ export async function POST(request: Request) {
     });
   } catch (err) {
     console.error("[signup] unhandled error:", err);
-    const message = err instanceof Error ? err.message : "An unexpected error occurred.";
+    const raw = err instanceof Error ? err.message?.trim() : "";
+    const message = raw || "An unexpected error occurred. Please try again.";
     return NextResponse.json({ ok: false, error: { code: "INTERNAL_ERROR", message } }, { status: 500 });
   }
 }

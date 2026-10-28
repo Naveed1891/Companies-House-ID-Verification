@@ -35,6 +35,8 @@ export async function POST(request: Request) {
     return sent ? NextResponse.json({ ok: true }) : NextResponse.json({ error: "Could not send a new code." }, { status: 502 });
   } catch (err) {
     console.error("[resend-signup-otp] unhandled error:", err);
-    return NextResponse.json({ error: "An unexpected error occurred." }, { status: 500 });
+    const raw = err instanceof Error ? err.message?.trim() : "";
+    const message = raw || "An unexpected error occurred. Please try again.";
+    return NextResponse.json({ ok: false, error: { code: "INTERNAL_ERROR", message } }, { status: 500 });
   }
 }

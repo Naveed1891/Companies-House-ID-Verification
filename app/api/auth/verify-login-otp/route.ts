@@ -69,6 +69,8 @@ export async function POST(request: Request) {
     });
   } catch (err) {
     console.error("[verify-login-otp] unhandled error:", err);
-    return NextResponse.json({ error: "An unexpected error occurred." }, { status: 500 });
+    const raw = err instanceof Error ? err.message?.trim() : "";
+    const message = raw || "An unexpected error occurred. Please try again.";
+    return NextResponse.json({ ok: false, error: { code: "INTERNAL_ERROR", message } }, { status: 500 });
   }
 }

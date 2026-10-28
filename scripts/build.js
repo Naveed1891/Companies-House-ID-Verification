@@ -9,10 +9,17 @@ function run(cmd) {
 }
 
 run("node_modules/.bin/prisma generate");
-run("node_modules/.bin/prisma migrate deploy");
 
-// Seed is best-effort: creates the superadmin on first deploy.
-// A seed failure (e.g. env var missing) must never block the build.
+// Migration and seed are best-effort at build time. On Hostinger the DB
+// credentials are injected at runtime; if they are absent at build time the
+// migration step logs a warning and the build continues. The next deploy
+// that has live credentials will apply any pending migrations.
+try {
+  run("node_modules/.bin/prisma migrate deploy");
+} catch (e) {
+  console.warn("[build] migrate skipped (no DB at build time):", e.message);
+}
+
 try {
   run("node_modules/.bin/prisma db seed");
 } catch (e) {

@@ -9,9 +9,11 @@ export class ApiClientError extends Error {
   }
 }
 
-function readErrorPayload(data: unknown): { message: string; code?: string } {
+function readErrorPayload(data: unknown, status?: number): { message: string; code?: string } {
+  const fallback = status ? `Server error (${status}). Please try again.` : "Something went wrong. Please try again.";
+
   if (!data || typeof data !== "object") {
-    return { message: "Request failed." };
+    return { message: fallback };
   }
   const payload = data as {
     error?: string | { code?: string; message?: string };
@@ -23,7 +25,7 @@ function readErrorPayload(data: unknown): { message: string; code?: string } {
   }
 
   if (payload.error && typeof payload.error === "object") {
-    const message = payload.error.message?.trim() || "Request failed.";
+    const message = payload.error.message?.trim() || fallback;
     return { message, code: payload.error.code };
   }
 
@@ -31,7 +33,7 @@ function readErrorPayload(data: unknown): { message: string; code?: string } {
     return { message: payload.message.trim() };
   }
 
-  return { message: "Request failed." };
+  return { message: fallback };
 }
 
 export async function apiFetch<T>(input: RequestInfo | URL, init?: RequestInit): Promise<T> {
@@ -45,7 +47,7 @@ export async function apiFetch<T>(input: RequestInfo | URL, init?: RequestInit):
   });
   const data = (await response.json().catch(() => ({}))) as T;
   if (!response.ok) {
-    const parsed = readErrorPayload(data);
+    const parsed = readErrorPayload(data, response.status);
     throw new ApiClientError(parsed.message, parsed.code, response.status);
   }
   return data;

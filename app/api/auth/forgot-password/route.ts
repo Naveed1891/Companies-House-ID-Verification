@@ -94,6 +94,8 @@ export async function POST(request: Request) {
   return NextResponse.json(GENERIC_OK);
   } catch (err) {
     console.error("[forgot-password] unhandled error:", err);
-    return NextResponse.json({ ok: false, error: "An unexpected error occurred." }, { status: 500 });
+    const raw = err instanceof Error ? err.message?.trim() : "";
+    const message = raw || "An unexpected error occurred. Please try again.";
+    return NextResponse.json({ ok: false, error: { code: "INTERNAL_ERROR", message } }, { status: 500 });
   }
 }
