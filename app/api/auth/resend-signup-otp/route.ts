@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       text: verifyEmail.text,
       html: verifyEmail.html,
     });
-    return sent ? NextResponse.json({ ok: true }) : NextResponse.json({ error: "Could not send a new code." }, { status: 502 });
+    return sent ? NextResponse.json({ ok: true }) : NextResponse.json({ ok: false, error: { code: "EMAIL_SEND_FAILED", message: "Could not send a new code. Please try again." } }, { status: 500 });
   } catch (err) {
     console.error("[resend-signup-otp] unhandled error:", err);
     const raw = err instanceof Error ? err.message?.trim() : "";

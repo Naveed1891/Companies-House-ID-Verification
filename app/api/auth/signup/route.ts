@@ -93,7 +93,7 @@ export async function POST(request: Request) {
       text: verifyEmail.text,
       html: verifyEmail.html,
     });
-    if (!delivered) return NextResponse.json({ ok: false, error: { code: "EMAIL_SEND_FAILED", message: "We could not send the verification code. Please try again." } }, { status: 502 });
+    if (!delivered) return NextResponse.json({ ok: false, error: { code: "EMAIL_SEND_FAILED", message: "We could not send the verification code. Please try again." } }, { status: 500 });
 
     return NextResponse.json({
       ok: true,

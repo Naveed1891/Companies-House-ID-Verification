@@ -74,8 +74,8 @@ export async function POST(request: Request) {
   if (!delivered) {
     await prisma.loginOtp.update({ where: { id: newOtp.id }, data: { consumedAt: new Date() } });
     return NextResponse.json(
-      { error: "We couldn't send a new sign-in code right now. Please try again shortly." },
-      { status: 502 },
+      { ok: false, error: { code: "EMAIL_SEND_FAILED", message: "We couldn't send a new sign-in code right now. Please try again shortly." } },
+      { status: 500 },
     );
   }
 

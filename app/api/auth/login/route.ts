@@ -117,8 +117,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ ...(await completeLogin()), otpBypassed: true });
     }
     return NextResponse.json(
-      { error: "We couldn't send your sign-in code right now. Please try again shortly." },
-      { status: 502 },
+      { ok: false, error: { code: "EMAIL_SEND_FAILED", message: "We couldn't send your sign-in code right now. Please try again shortly." } },
+      { status: 500 },
     );
   }
 
