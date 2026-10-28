@@ -4,7 +4,7 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { FinalCta, PageFrame, PageHero } from "@/components/PageFrame";
 
 export const metadata: Metadata = {
-  title: "About Companies House ID Verification - ACSP Approved Identity Verification Service",
+  title: "About Us - ACSP Approved CH ID Verification",
   description:
     "Learn about CompaniesHouseIDVerification.com and its guided identity-verification service for directors, PSCs and LLP members worldwide.",
   keywords: [

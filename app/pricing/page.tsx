@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/JsonLd";
 import { PageFrame, PageHero } from "@/components/PageFrame";
+import { TrustpilotReviews } from "@/components/TrustpilotReviews";
 import { PackagePanel, PackagePanelSkeleton } from "@/components/PackagePanel";
 import { getActivePackages } from "@/lib/server/catalog";
 import { formatPrice } from "@/lib/server/price-format";
@@ -49,6 +50,7 @@ export default async function PricingPage() {
           <p className="mt-6 text-center text-sm leading-6 text-muted-text"><strong className="text-charcoal">No hidden extras.</strong> The fee covers the full guided process, document checks and confirmation. Nothing more to pay.</p>
         </div>
       </section>
+      <TrustpilotReviews />
       <section className="border-t border-soft-border bg-warm-cream">
         <div className="reading-container py-[clamp(3.5rem,7vw,5.5rem)] text-center">
           <h2 className="section-title mb-4">Questions about the service?</h2>

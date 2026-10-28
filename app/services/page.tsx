@@ -7,7 +7,7 @@ import { getActivePackages } from "@/lib/server/catalog";
 import { formatPrice } from "@/lib/server/price-format";
 
 export const metadata: Metadata = {
-  title: "Companies House Identity Verification Service - ACSP Approved Provider",
+  title: "Companies House Verification Service - ACSP Approved",
   description:
     "ACSP-approved Companies House identity verification service. Get your personal code for your confirmation statement. Covers director, PSC, LLP member and authorised filer verification. Alternative to GOV.UK One Login for UK and overseas applicants.",
   keywords: [

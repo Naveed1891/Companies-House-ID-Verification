@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://companieshouseidverification.com"),
   title: {
-    default: "Companies House ID Verification - ACSP Approved Identity Verification Service",
+    default: "Companies House ID Verification - ACSP Approved Service",
     template: "%s | Companies House ID Verification",
   },
   description:
@@ -136,7 +136,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${newsreader.variable}`}>
+    <html lang="en-GB" className={`${manrope.variable} ${newsreader.variable}`}>
       <body>
         <OrganizationJsonLd />
         <WebSiteJsonLd />

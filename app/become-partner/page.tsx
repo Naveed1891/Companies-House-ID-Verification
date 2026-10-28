@@ -4,7 +4,7 @@ import { PageFrame, PageHero } from "@/components/PageFrame";
 import { PartnerForm } from "@/components/PartnerForm";
 
 export const metadata: Metadata = {
-  title: "Become a Partner - B2B Companies House Verification Partnership",
+  title: "Partner Programme - Companies House Verification",
   description:
     "Partner with Companies House ID Verification to offer ACSP-approved Companies House identity verification to your clients. Referral and reseller partnerships for accountants, formation agents, law firms and corporate service providers. Volume pricing and dedicated support.",
   keywords: [

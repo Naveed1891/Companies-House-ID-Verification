@@ -4,6 +4,7 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { FaqJsonLd, ServiceJsonLd } from "@/components/JsonLd";
 import { PageFrame } from "@/components/PageFrame";
+import { TrustpilotReviews } from "@/components/TrustpilotReviews";
 import { faqs, publishedArticles } from "@/components/data";
 import { getActivePackages } from "@/lib/server/catalog";
 import { formatPrice, formatRegularPrice } from "@/lib/server/price-format";
@@ -281,6 +282,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Trust Reviews ── */}
+      <TrustpilotReviews />
 
       {/* ── Final CTA ── */}
       <section style={{ background: "#2e7d32" }}>

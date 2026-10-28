@@ -6,7 +6,7 @@ import { PageFrame, PageHero } from "@/components/PageFrame";
 import { faqs } from "@/components/data";
 
 export const metadata: Metadata = {
-  title: "FAQ - Companies House Identity Verification & Personal Code Questions",
+  title: "FAQ - Companies House Verification & Personal Code",
   description:
     "Answers to common questions about Companies House identity verification under ECCTA: how to get your personal code, the November 2026 deadline, documents needed, costs, overseas applicants and GOV.UK One Login alternatives.",
   keywords: [

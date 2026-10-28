@@ -19,17 +19,15 @@ export function OrganizationJsonLd() {
         url: "https://companieshouseidverification.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://companieshouseidverification.com/ch-logo.webp",
-          width: 220,
-          height: 66,
+          url: "https://companieshouseidverification.com/icon-512.png",
+          width: 512,
+          height: 512,
         },
         image: "https://companieshouseidverification.com/opengraph-image",
         description:
           "ACSP-approved Companies House identity verification service for directors, PSCs, LLP members and authorised filers. Fixed £19 fee, UK and international applicants welcome.",
         foundingDate: "2024",
-        sameAs: [
-          "https://find-and-update.company-information.service.gov.uk",
-        ],
+        sameAs: [],
         address: {
           "@type": "PostalAddress",
           addressCountry: "GB",
@@ -96,6 +94,16 @@ export function WebSiteJsonLd() {
         "@type": "WebSite",
         name: "Companies House ID Verification",
         url: "https://companieshouseidverification.com",
+        description: "ACSP-approved Companies House identity verification service for directors, PSCs, LLP members and authorised filers. Fixed £19 fee.",
+        inLanguage: "en-GB",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://companieshouseidverification.com/blog?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
       }}
     />
   );
@@ -194,9 +202,9 @@ export function ArticleJsonLd({
           url: "https://companieshouseidverification.com",
           logo: {
             "@type": "ImageObject",
-            url: "https://companieshouseidverification.com/ch-logo.webp",
-            width: 220,
-            height: 66,
+            url: "https://companieshouseidverification.com/icon-512.png",
+            width: 512,
+            height: 512,
           },
         },
       }}
@@ -285,13 +293,6 @@ export function ProductJsonLd() {
             "@type": "Organization",
             name: "Companies House ID Verification",
           },
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "120",
-          bestRating: "5",
-          worstRating: "1",
         },
       }}
     />

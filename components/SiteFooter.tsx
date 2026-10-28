@@ -17,6 +17,7 @@ const columns = [
       ["Requirements", "/requirements"],
       ["How It Works", "/how-it-works"],
       ["FAQ", "/faq"],
+      ["Guides & Resources", "/blog"],
       ["Contact", "/contact"],
       ["Become a Partner", "/become-partner"],
     ],

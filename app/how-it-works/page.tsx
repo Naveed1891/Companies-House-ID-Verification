@@ -3,7 +3,7 @@ import { BreadcrumbJsonLd, HowToJsonLd } from "@/components/JsonLd";
 import { FinalCta, PageFrame, PageHero } from "@/components/PageFrame";
 
 export const metadata: Metadata = {
-  title: "How to Verify Your Identity with Companies House - Step by Step Guide",
+  title: "How Companies House ID Verification Works - Step by Step",
   description:
     "How to get your Companies House personal code in four steps. Complete your ECCTA identity verification through our ACSP-approved process. Most directors finish in 15 minutes. Alternative to GOV.UK One Login.",
   keywords: [
